@@ -1,0 +1,50 @@
+/* Stayflow design tokens. One source for every experience (Business, Guest, Kitchen, Staff).
+   Geist is bundled under the SIL Open Font License 1.1 (see src/fonts/geist-OFL.txt). */
+@font-face {
+  font-family: Geist;
+  src: url("../fonts/geist.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+
+  /* Colour: warm paper neutrals, one pine accent, four semantic hues. Pairs below are checked at 4.5:1 or better. */
+  --canvas: #f6f4ee;
+  --surface: #fff;
+  --ink: #1c201e;
+  --muted: #5d645f;
+  --line: #e5e1d6;
+  --control: #868c86;          /* interactive boundaries, 3:1 on surface */
+  --accent: #1d5c49;
+  --accent-strong: #174a3b;
+  --accent-wash: #e4efe9;
+  --pine-deep: #12372c;        /* brand surfaces only: sign-in panel */
+  --brass: #c9a35b;            /* the lit doorway: logo dot and sign-in artwork, never text on light */
+  --track: #ece9e0;            /* segmented control track */
+
+  --available: #1d5c49;  --available-wash: #e4efe9;
+  --occupied: #2c4a6e;   --occupied-wash: #e6edf5;
+  --out: #6e5a35;        --out-wash: #f2ecdc;
+  --attention: #8a4b0b;  --attention-wash: #fbeed9;
+  --danger: #9b2c2c;     --danger-wash: #fbeceb;
+
+  /* Type: one family. 15 px base, 4 text steps, one display step. Tracking tightens as size grows. */
+  --font: Geist, system-ui, sans-serif;
+  --text-xs: .75rem;
+  --text-sm: .8125rem;
+  --text-md: .9375rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+
+  /* Space: 4 px grid. */
+  --s1: .25rem; --s2: .5rem; --s3: .75rem; --s4: 1rem; --s5: 1.5rem; --s6: 2rem;
+
+  /* Shape and motion. */
+  --r-sm: 6px; --r: 8px; --r-lg: 12px;
+  --ease: cubic-bezier(.23, 1, .32, 1);
+  --fast: 120ms;
+  --touch: 44px;
+  --lift: 0 1px 0 rgb(28 32 30 / .04), 0 10px 24px -14px rgb(28 32 30 / .14);
+}

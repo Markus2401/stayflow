@@ -1,0 +1,42 @@
+# Local secrets; review example files before committing them.
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.pfx
+*.p12
+
+# Reproducible build/install outputs, when the stack is selected.
+node_modules/
+.next/
+dist/
+build/
+coverage/
+playwright-report/
+.playwright-cli/
+test-results/
+.venv/
+__pycache__/
+*.pyc
+
+# Local scratch, logs and OS/editor state.
+work/
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+.wrangler/
+supabase/.temp/
+supabase/.branches/
+
+# Claude Code skill links (created by scripts/link-claude-skills.mjs)
+.claude/skills
+.claude/references
+.claude/settings.local.json

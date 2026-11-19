@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-font="geist"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Room A4 · Hillview Guesthouse (guest QR concept)</title>
+<script>/* light-first; ?theme and ?glass as in the Lab candidate */ (() => { const q = new URLSearchParams(location.search); let t = q.get('theme'), g = q.get('glass'); try { t ||= localStorage.getItem('sf-glass:theme'); g ||= localStorage.getItem('sf-glass:glass'); } catch {} document.documentElement.dataset.theme = t || 'light'; document.documentElement.dataset.glass = g || 'full'; })();</script>
+<link rel="stylesheet" href="glass.css">
+<style>
+@font-face { font-family: Geist; src: url("/fonts/geist.ttf") format("truetype"); font-weight: 100 900; font-display: swap; }
+/* Guest landing reached by scanning the room's QR code. Synthetic concept, not built. Same tokens and control glass as the
+   business candidate; a soft light field at the top gives the glass something to pick up. */
+body { font-size: 1rem; background: radial-gradient(120% 60% at 50% -10%, rgb(124 125 240 / .18), transparent 60%), radial-gradient(80% 40% at 100% 0%, rgb(120 190 230 / .16), transparent 70%), var(--surface); }
+.wrap { max-width: 440px; margin: 0 auto; padding: calc(16px + env(safe-area-inset-top)) 16px calc(28px + env(safe-area-inset-bottom)); display: grid; gap: 14px; }
+.concept { justify-self: start; padding: 2px 8px; border-radius: 6px; font-size: .75rem; color: var(--muted); box-shadow: inset 0 0 0 1px var(--line-2); background: var(--surface); }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.top .brand { font-size: .9375rem; }
+.room { padding: 3px 9px; border-radius: 99px; font-size: .8125rem; font-variant-numeric: tabular-nums; background: var(--cg-fill); box-shadow: var(--cg-rim), var(--cg-lift); }
+h1 { font-size: 1.75rem; line-height: 1.15; font-weight: 500; letter-spacing: -.025em; margin-top: 8px; }
+.lede { color: var(--muted); }
+.hero { position: relative; overflow: hidden; border-radius: 18px; padding: 16px; display: grid; gap: 12px; isolation: isolate;
+  background: linear-gradient(160deg, var(--glass-a), var(--glass-b)); -webkit-backdrop-filter: blur(16px) saturate(1.7); backdrop-filter: blur(16px) saturate(1.7); box-shadow: var(--raise); }
+.hero::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none; background: var(--rim-dir);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); }
+.hero h2 { font-size: 1rem; font-weight: 500; } .hero p { color: var(--muted); font-size: .875rem; }
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.actions .btn { min-height: 52px; font-size: .9375rem; border-radius: 14px; flex-direction: column; gap: 2px; padding: 8px 10px; }
+.actions .btn small { font-size: .75rem; font-weight: 400; opacity: .8; }
+.actions .wide { grid-column: 1 / -1; flex-direction: row; gap: 8px; }
+.info { display: grid; grid-template-columns: auto 1fr; gap: 8px 14px; padding: 14px 16px; border-radius: 14px; background: var(--surface); box-shadow: inset 0 0 0 1px var(--line-2); font-size: .9375rem; }
+.info dt { color: var(--muted); } .info dd { font-weight: 500; }
+.note { color: var(--muted); font-size: .8125rem; }
+[data-glass=reduced] .hero { background: var(--raised); -webkit-backdrop-filter: none; backdrop-filter: none; }
+@media (prefers-reduced-transparency: reduce) { :root:not([data-glass=full]) .hero { background: var(--raised); -webkit-backdrop-filter: none; backdrop-filter: none; } }
+</style></head>
+<body>
+<main class="wrap">
+  <span class="concept">Guest QR screen · synthetic concept, not built</span>
+  <div class="top"><span class="brand"><span class="tile" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 21V10.5C5 6.4 8.1 3 12 3s7 3.4 7 7.5V21" fill="none" stroke="#E4E4EC" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="10" r="2" fill="#A3A4FF"/></svg></span>Hillview Guesthouse</span><span class="room">Room A4</span></div>
+  <div><h1>Good morning</h1><p class="lede">Everything for your stay in one place.</p></div>
+  <section class="hero" aria-labelledby="bf-h">
+    <h2 id="bf-h">Breakfast tomorrow</h2><p>Choose by 20:00 tonight. Served 7:00 to 9:30 in the garden room.</p>
+    <div class="actions">
+      <button class="btn btn-primary wide" type="button" data-say>Choose breakfast</button>
+      <button class="btn btn-secondary" type="button" data-say>Ask for something<small>Towels, pillows, help</small></button>
+      <button class="btn btn-secondary" type="button" data-say>Late checkout<small>If available</small></button>
+    </div>
+  </section>
+  <dl class="info" aria-label="Good to know"><dt>Wi-Fi</dt><dd>Hillview-Guest</dd><dt>Checkout</dt><dd>10:00</dd><dt>Reception</dt><dd>7:00 to 21:00 · dial 0</dd></dl>
+  <div class="actions"><button class="btn btn-secondary" type="button" data-say>Call reception</button><button class="btn btn-secondary" type="button" data-say>Local tips</button></div>
+  <p class="note" role="status" aria-live="polite">This code identifies room A4 only. Anything private (your booking, payments, messages) needs your booking code; the QR code never unlocks it.</p>
+</main>
+<script>/* concept only: buttons say so instead of doing anything */ document.addEventListener('click', e => { if (e.target.closest('[data-say]')) document.querySelector('.note').textContent = 'Concept only: this action is not built yet. Nothing was sent.'; });</script>
+</body></html>

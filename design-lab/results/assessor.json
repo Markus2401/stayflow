@@ -1,0 +1,79 @@
+{
+ "ledger": {
+  "ratings": {
+   "ux": 3.5,
+   "visual": 3.5,
+   "motion": 3,
+   "perf": 5,
+   "resp": 4,
+   "a11y": 3.5
+  },
+  "total": 74
+ },
+ "apple": {
+  "ratings": {
+   "ux": 4,
+   "visual": 4.5,
+   "motion": 3.5,
+   "perf": 3,
+   "resp": 3.5,
+   "a11y": 3.5
+  },
+  "total": 75
+ },
+ "impeccable": {
+  "ratings": {
+   "ux": 4.5,
+   "visual": 4.5,
+   "motion": 4,
+   "perf": 3.5,
+   "resp": 3.5,
+   "a11y": 3
+  },
+  "total": 80
+ },
+ "uxpro": {
+  "ratings": {
+   "ux": 4.5,
+   "visual": 3.5,
+   "motion": 2.5,
+   "perf": 4.5,
+   "resp": 4.5,
+   "a11y": 4.5
+  },
+  "total": 78
+ },
+ "emil": {
+  "ratings": {
+   "ux": 4,
+   "visual": 3.5,
+   "motion": 4.5,
+   "perf": 4,
+   "resp": 3,
+   "a11y": 3.5
+  },
+  "total": 77
+ },
+ "frontend": {
+  "ratings": {
+   "ux": 4,
+   "visual": 3,
+   "motion": 3,
+   "perf": 4.5,
+   "resp": 4,
+   "a11y": 4.5
+  },
+  "total": 75
+ },
+ "unslop": {
+  "ratings": {
+   "ux": 3.5,
+   "visual": 4,
+   "motion": 3,
+   "perf": 4.5,
+   "resp": 4.5,
+   "a11y": 4.5
+  },
+  "total": 77
+ }
+}

@@ -1,0 +1,3078 @@
+{
+ "ledger": {
+  "design": "ledger",
+  "load": {
+   "dclMs": 10.6,
+   "loadMs": 10.9,
+   "firstDrawMs": 33.9,
+   "fcpMs": 108,
+   "kb": 68,
+   "requests": 5,
+   "runs": 5
+  },
+  "tasks": [
+   {
+    "name": "find",
+    "ok": true,
+    "ms": 254,
+    "clicks": 2,
+    "keys": 6,
+    "err": ""
+   },
+   {
+    "name": "checkin",
+    "ok": true,
+    "ms": 400,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   },
+   {
+    "name": "validate",
+    "ok": true,
+    "ms": 351,
+    "clicks": 3,
+    "keys": 1,
+    "err": ""
+   },
+   {
+    "name": "addedit",
+    "ok": true,
+    "ms": 893,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   },
+   {
+    "name": "menu",
+    "ok": true,
+    "ms": 587,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   }
+  ],
+  "interaction": {
+   "search": {
+    "n": 6,
+    "medianMs": 30,
+    "p95Ms": 32.5
+   },
+   "select": {
+    "n": 1,
+    "medianMs": 30.4,
+    "p95Ms": 30.4
+   },
+   "close-key": {
+    "n": 2,
+    "medianMs": 25,
+    "p95Ms": 25
+   },
+   "filter": {
+    "n": 1,
+    "medianMs": 30.9,
+    "p95Ms": 30.9
+   },
+   "open": {
+    "n": 4,
+    "medianMs": 30.7,
+    "p95Ms": 31.6
+   },
+   "chip": {
+    "n": 1,
+    "medianMs": 29.2,
+    "p95Ms": 29.2
+   },
+   "write-checkin": {
+    "n": 1,
+    "medianMs": 12.2,
+    "p95Ms": 12.2
+   },
+   "submit": {
+    "n": 5,
+    "medianMs": 31.6,
+    "p95Ms": 36.4
+   },
+   "write-add": {
+    "n": 1,
+    "medianMs": 13.8,
+    "p95Ms": 13.8
+   },
+   "write-edit": {
+    "n": 1,
+    "medianMs": 13.6,
+    "p95Ms": 13.6
+   },
+   "menu": {
+    "n": 2,
+    "medianMs": 30.5,
+    "p95Ms": 30.5
+   },
+   "prop": {
+    "n": 1,
+    "medianMs": 30.9,
+    "p95Ms": 30.9
+   }
+  },
+  "frames": [
+   {
+    "ev": "open-modal",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "close-modal",
+    "n": 43,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "open-modal",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "close-modal",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "open-modal",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "close-modal",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "open-modal",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "close-modal",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.8,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "open-modal",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "close-modal",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   }
+  ],
+  "cls": 0,
+  "longTasks": 0,
+  "consoleErrors": [],
+  "devices": {
+   "tablet": [
+    {
+     "name": "find",
+     "ok": true,
+     "ms": 252,
+     "clicks": 2,
+     "keys": 6,
+     "err": ""
+    },
+    {
+     "name": "checkin",
+     "ok": true,
+     "ms": 405,
+     "clicks": 4,
+     "keys": 0,
+     "err": ""
+    }
+   ],
+   "mobile": [
+    {
+     "name": "find",
+     "ok": true,
+     "ms": 250,
+     "clicks": 2,
+     "keys": 6,
+     "err": ""
+    },
+    {
+     "name": "checkin",
+     "ok": true,
+     "ms": 429,
+     "clicks": 4,
+     "keys": 0,
+     "err": ""
+    }
+   ]
+  },
+  "large": {
+   "rooms": 60,
+   "dom": 591,
+   "firstDraw": 33,
+   "scroll": {
+    "frames": 30,
+    "worstMs": 18,
+    "totalMs": 477
+   },
+   "search": {
+    "n": 3,
+    "medianMs": 23.8,
+    "p95Ms": 30.9
+   },
+   "filter": {
+    "n": 2,
+    "medianMs": 31.2,
+    "p95Ms": 31.2
+   },
+   "cls": 0
+  },
+  "network": {
+   "slowLoadingShown": true,
+   "skeletonDuringLoad": true,
+   "busyStateShown": true,
+   "errorShownInForm": true,
+   "retrySucceeds": true
+  },
+  "quality": {
+   "keyboard": {
+    "slashFocusesSearch": true,
+    "enterOpensRoom": true,
+    "escapeClosesRoom": true,
+    "focusReturns": true,
+    "arrowMovesFocus": true,
+    "formAutofocus": true,
+    "enterSubmits": true,
+    "escapeClosesForm": true,
+    "focusReturnsFromForm": true,
+    "focusStaysInForm": true
+   },
+   "touch": {
+    "checked": 33,
+    "under44": 2,
+    "under24": 2,
+    "examples": [
+     "Stayflow rooms 22x28",
+     "Hillview Guesthouse ▾ 136x16"
+    ]
+   },
+   "overflow": {
+    "320": 0,
+    "390": 0,
+    "768": 0,
+    "820": 0,
+    "1280": 0,
+    "1440": 0,
+    "1280×720": 0,
+    "390 stress": 0,
+    "320 stress": 0,
+    "640 (200% zoom of 1280)": 0
+   },
+   "contrast": {
+    "list": {
+     "checked": 61,
+     "minRatio": 3.39,
+     "failures": 1,
+     "examples": [
+      "/ 3.39 (<4.5)"
+     ]
+    },
+    "detail": {
+     "checked": 72,
+     "minRatio": 3.39,
+     "failures": 1,
+     "examples": [
+      "/ 3.39 (<4.5)"
+     ]
+    },
+    "form": {
+     "checked": 72,
+     "minRatio": 3.39,
+     "failures": 1,
+     "examples": [
+      "/ 3.39 (<4.5)"
+     ]
+    },
+    "note": "Sampled from computed colours; gradients, images and backdrop blur are not modelled."
+   },
+   "reducedMotion": {
+    "activeAnimations": 1,
+    "hostTransition": "0s",
+    "longestMs": 120,
+    "pass": true
+   },
+   "invalidInputs": {
+    "tooLongLabel": true,
+    "duplicateLabel": true,
+    "scriptInjectionInert": true
+   }
+  },
+  "motion": [
+   "[data-act=\"filter:vacant\"] transition background-color+ color 0.12s cubic-bezier(0.23, 1, 0.32, 1)",
+   ".btn transition background-color+ border-color+ transform 0.12s cubic-bezier(0.23, 1, 0.32, 1)",
+   "open: animation rise-in 180ms linear",
+   "menu: animation lmIn 140ms linear"
+  ],
+  "summary": {
+   "checkInMs": 400,
+   "clicksCheckIn": 4,
+   "worstFrame": 16.8,
+   "failures": 0
+  }
+ },
+ "apple": {
+  "design": "apple",
+  "load": {
+   "dclMs": 11.4,
+   "loadMs": 11.6,
+   "firstDrawMs": 54,
+   "fcpMs": 72,
+   "kb": 43,
+   "requests": 3,
+   "runs": 5
+  },
+  "tasks": [
+   {
+    "name": "find",
+    "ok": true,
+    "ms": 277,
+    "clicks": 2,
+    "keys": 6,
+    "err": ""
+   },
+   {
+    "name": "checkin",
+    "ok": true,
+    "ms": 874,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   },
+   {
+    "name": "validate",
+    "ok": true,
+    "ms": 783,
+    "clicks": 3,
+    "keys": 1,
+    "err": ""
+   },
+   {
+    "name": "addedit",
+    "ok": true,
+    "ms": 1875,
+    "clicks": 5,
+    "keys": 0,
+    "err": ""
+   },
+   {
+    "name": "menu",
+    "ok": true,
+    "ms": 613,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   }
+  ],
+  "interaction": {
+   "search": {
+    "n": 6,
+    "medianMs": 26,
+    "p95Ms": 29.3
+   },
+   "select": {
+    "n": 2,
+    "medianMs": 59,
+    "p95Ms": 59
+   },
+   "close-key": {
+    "n": 3,
+    "medianMs": 44,
+    "p95Ms": 80.9
+   },
+   "filter": {
+    "n": 1,
+    "medianMs": 28.6,
+    "p95Ms": 28.6
+   },
+   "open": {
+    "n": 4,
+    "medianMs": 65.6,
+    "p95Ms": 84.9
+   },
+   "chip": {
+    "n": 1,
+    "medianMs": 67.1,
+    "p95Ms": 67.1
+   },
+   "write-checkin": {
+    "n": 1,
+    "medianMs": 10,
+    "p95Ms": 10
+   },
+   "submit": {
+    "n": 5,
+    "medianMs": 58.8,
+    "p95Ms": 62.6
+   },
+   "write-add": {
+    "n": 1,
+    "medianMs": 9.8,
+    "p95Ms": 9.8
+   },
+   "write-edit": {
+    "n": 1,
+    "medianMs": 39.7,
+    "p95Ms": 39.7
+   },
+   "menu": {
+    "n": 2,
+    "medianMs": 31.2,
+    "p95Ms": 31.2
+   },
+   "prop": {
+    "n": 1,
+    "medianMs": 29.9,
+    "p95Ms": 29.9
+   }
+  },
+  "frames": [
+   {
+    "ev": "open-modal",
+    "n": 27,
+    "max": 66.8,
+    "p95": 50.1,
+    "over33": 7,
+    "over50": 2
+   },
+   {
+    "ev": "close-modal",
+    "n": 26,
+    "max": 66.8,
+    "p95": 50.1,
+    "over33": 7,
+    "over50": 2
+   },
+   {
+    "ev": "open-modal",
+    "n": 16,
+    "max": 66.8,
+    "p95": 66.8,
+    "over33": 13,
+    "over50": 2
+   },
+   {
+    "ev": "close-modal",
+    "n": 24,
+    "max": 66.7,
+    "p95": 50.1,
+    "over33": 8,
+    "over50": 2
+   },
+   {
+    "ev": "open-modal",
+    "n": 15,
+    "max": 66.7,
+    "p95": 66.7,
+    "over33": 13,
+    "over50": 4
+   },
+   {
+    "ev": "close-modal",
+    "n": 27,
+    "max": 50.1,
+    "p95": 50.1,
+    "over33": 8,
+    "over50": 2
+   },
+   {
+    "ev": "open-modal",
+    "n": 16,
+    "max": 50.1,
+    "p95": 50.1,
+    "over33": 12,
+    "over50": 3
+   },
+   {
+    "ev": "close-modal",
+    "n": 18,
+    "max": 50.1,
+    "p95": 50.1,
+    "over33": 11,
+    "over50": 2
+   },
+   {
+    "ev": "open-modal",
+    "n": 17,
+    "max": 50.1,
+    "p95": 50.1,
+    "over33": 11,
+    "over50": 3
+   },
+   {
+    "ev": "close-modal",
+    "n": 39,
+    "max": 49.9,
+    "p95": 16.8,
+    "over33": 1,
+    "over50": 0
+   }
+  ],
+  "cls": 0,
+  "longTasks": 0,
+  "consoleErrors": [],
+  "devices": {
+   "tablet": [
+    {
+     "name": "find",
+     "ok": true,
+     "ms": 270,
+     "clicks": 2,
+     "keys": 6,
+     "err": ""
+    },
+    {
+     "name": "checkin",
+     "ok": true,
+     "ms": 826,
+     "clicks": 4,
+     "keys": 0,
+     "err": ""
+    }
+   ],
+   "mobile": [
+    {
+     "name": "find",
+     "ok": true,
+     "ms": 255,
+     "clicks": 2,
+     "keys": 6,
+     "err": ""
+    },
+    {
+     "name": "checkin",
+     "ok": true,
+     "ms": 1061,
+     "clicks": 4,
+     "keys": 0,
+     "err": ""
+    }
+   ]
+  },
+  "large": {
+   "rooms": 60,
+   "dom": 816,
+   "firstDraw": 56,
+   "scroll": {
+    "frames": 30,
+    "worstMs": 18,
+    "totalMs": 494
+   },
+   "search": {
+    "n": 3,
+    "medianMs": 23.5,
+    "p95Ms": 32.4
+   },
+   "filter": {
+    "n": 2,
+    "medianMs": 30.8,
+    "p95Ms": 30.8
+   },
+   "cls": 0
+  },
+  "network": {
+   "slowLoadingShown": true,
+   "skeletonDuringLoad": true,
+   "busyStateShown": true,
+   "errorShownInForm": true,
+   "retrySucceeds": true
+  },
+  "quality": {
+   "keyboard": {
+    "slashFocusesSearch": true,
+    "enterOpensRoom": true,
+    "escapeClosesRoom": true,
+    "focusReturns": true,
+    "arrowMovesFocus": true,
+    "formAutofocus": true,
+    "enterSubmits": true,
+    "escapeClosesForm": true,
+    "focusReturnsFromForm": true,
+    "focusStaysInForm": true
+   },
+   "touch": {
+    "checked": 25,
+    "under44": 12,
+    "under24": 0,
+    "examples": [
+     "Property menu 218x36",
+     "Add room 36x36",
+     "INPUT 358x40",
+     "All 89x32"
+    ]
+   },
+   "overflow": {
+    "320": 0,
+    "390": 0,
+    "768": 0,
+    "820": 0,
+    "1280": 0,
+    "1440": 0,
+    "1280×720": 0,
+    "390 stress": 0,
+    "320 stress": 0,
+    "640 (200% zoom of 1280)": 0
+   },
+   "contrast": {
+    "list": {
+     "checked": 53,
+     "minRatio": 4.51,
+     "failures": 0,
+     "examples": []
+    },
+    "detail": {
+     "checked": 64,
+     "minRatio": 4.51,
+     "failures": 0,
+     "examples": []
+    },
+    "form": {
+     "checked": 64,
+     "minRatio": 4.51,
+     "failures": 0,
+     "examples": []
+    },
+    "note": "Sampled from computed colours; gradients, images and backdrop blur are not modelled."
+   },
+   "reducedMotion": {
+    "activeAnimations": 0,
+    "hostTransition": "0.001s",
+    "longestMs": 1,
+    "pass": true
+   },
+   "invalidInputs": {
+    "tooLongLabel": true,
+    "duplicateLabel": true,
+    "scriptInjectionInert": true
+   }
+  },
+  "motion": [
+   "#host transition opacity+ transform 0.35s cubic-bezier(0.32, 0.72, 0, 1)",
+   "[data-act=\"filter:vacant\"] transition transform+ background-color 0.12s cubic-bezier(0.32, 0.72, 0, 1)",
+   ".btn transition transform+ background-color 0.12s cubic-bezier(0.32, 0.72, 0, 1)",
+   "open: transition transform 450ms cubic-bezier(0.32, 0.72, 0, 1)",
+   "open: transition opacity 350ms cubic-bezier(0.32, 0.72, 0, 1)",
+   "open: transition transform 500ms cubic-bezier(0.32, 0.72, 0, 1)",
+   "menu: transition background-color 120ms ease",
+   "menu: animation lmi 220ms linear"
+  ],
+  "summary": {
+   "checkInMs": 874,
+   "clicksCheckIn": 4,
+   "worstFrame": 66.8,
+   "failures": 0
+  }
+ },
+ "impeccable": {
+  "design": "impeccable",
+  "load": {
+   "dclMs": 11,
+   "loadMs": 11.2,
+   "firstDrawMs": 37.3,
+   "fcpMs": 112,
+   "kb": 844,
+   "requests": 5,
+   "runs": 5
+  },
+  "tasks": [
+   {
+    "name": "find",
+    "ok": true,
+    "ms": 254,
+    "clicks": 2,
+    "keys": 6,
+    "err": ""
+   },
+   {
+    "name": "checkin",
+    "ok": true,
+    "ms": 1068,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   },
+   {
+    "name": "validate",
+    "ok": true,
+    "ms": 1001,
+    "clicks": 3,
+    "keys": 1,
+    "err": ""
+   },
+   {
+    "name": "addedit",
+    "ok": true,
+    "ms": 1576,
+    "clicks": 5,
+    "keys": 0,
+    "err": ""
+   },
+   {
+    "name": "menu",
+    "ok": true,
+    "ms": 572,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   }
+  ],
+  "interaction": {
+   "search": {
+    "n": 6,
+    "medianMs": 30.4,
+    "p95Ms": 33.7
+   },
+   "select": {
+    "n": 2,
+    "medianMs": 31.3,
+    "p95Ms": 31.3
+   },
+   "close-key": {
+    "n": 3,
+    "medianMs": 21.4,
+    "p95Ms": 31.4
+   },
+   "filter": {
+    "n": 1,
+    "medianMs": 28.9,
+    "p95Ms": 28.9
+   },
+   "open": {
+    "n": 4,
+    "medianMs": 30.9,
+    "p95Ms": 31.2
+   },
+   "chip": {
+    "n": 1,
+    "medianMs": 29.9,
+    "p95Ms": 29.9
+   },
+   "write-checkin": {
+    "n": 1,
+    "medianMs": 13.4,
+    "p95Ms": 13.4
+   },
+   "submit": {
+    "n": 3,
+    "medianMs": 31.8,
+    "p95Ms": 34.8
+   },
+   "write-add": {
+    "n": 1,
+    "medianMs": 14.2,
+    "p95Ms": 14.2
+   },
+   "write-edit": {
+    "n": 1,
+    "medianMs": 14.3,
+    "p95Ms": 14.3
+   },
+   "menu": {
+    "n": 2,
+    "medianMs": 31.4,
+    "p95Ms": 31.4
+   },
+   "prop": {
+    "n": 1,
+    "medianMs": 30.8,
+    "p95Ms": 30.8
+   }
+  },
+  "frames": [
+   {
+    "ev": "open-panel",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.8,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "close-panel",
+    "n": 43,
+    "max": 16.8,
+    "p95": 16.8,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "open-panel",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "close-panel",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "open-panel",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "close-panel",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "open-panel",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.8,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "close-panel",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "open-panel",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "close-panel",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.8,
+    "over33": 0,
+    "over50": 0
+   }
+  ],
+  "cls": 0.0004,
+  "longTasks": 0,
+  "consoleErrors": [],
+  "devices": {
+   "tablet": [
+    {
+     "name": "find",
+     "ok": true,
+     "ms": 252,
+     "clicks": 2,
+     "keys": 6,
+     "err": ""
+    },
+    {
+     "name": "checkin",
+     "ok": true,
+     "ms": 1062,
+     "clicks": 4,
+     "keys": 0,
+     "err": ""
+    }
+   ],
+   "mobile": [
+    {
+     "name": "find",
+     "ok": true,
+     "ms": 243,
+     "clicks": 2,
+     "keys": 6,
+     "err": ""
+    },
+    {
+     "name": "checkin",
+     "ok": true,
+     "ms": 1053,
+     "clicks": 4,
+     "keys": 0,
+     "err": ""
+    }
+   ]
+  },
+  "large": {
+   "rooms": 60,
+   "dom": 666,
+   "firstDraw": 39,
+   "scroll": {
+    "frames": 30,
+    "worstMs": 18,
+    "totalMs": 470
+   },
+   "search": {
+    "n": 3,
+    "medianMs": 21.5,
+    "p95Ms": 23.6
+   },
+   "filter": {
+    "n": 2,
+    "medianMs": 31.1,
+    "p95Ms": 31.1
+   },
+   "cls": 0.0005
+  },
+  "network": {
+   "slowLoadingShown": true,
+   "skeletonDuringLoad": true,
+   "busyStateShown": true,
+   "errorShownInForm": true,
+   "retrySucceeds": true
+  },
+  "quality": {
+   "keyboard": {
+    "slashFocusesSearch": true,
+    "enterOpensRoom": true,
+    "escapeClosesRoom": true,
+    "focusReturns": true,
+    "arrowMovesFocus": true,
+    "formAutofocus": true,
+    "enterSubmits": true,
+    "escapeClosesForm": true,
+    "focusReturnsFromForm": true,
+    "focusStaysInForm": true
+   },
+   "touch": {
+    "checked": 28,
+    "under44": 4,
+    "under24": 1,
+    "examples": [
+     "Hillview GuesthouseManag 319x36",
+     "Needs attention3 145x38",
+     "Vacant now5 119x38",
+     "All13 19x45"
+    ]
+   },
+   "overflow": {
+    "320": 0,
+    "390": 0,
+    "768": 0,
+    "820": 0,
+    "1280": 0,
+    "1440": 0,
+    "1280×720": 0,
+    "390 stress": 0,
+    "320 stress": 0,
+    "640 (200% zoom of 1280)": 0
+   },
+   "contrast": {
+    "list": {
+     "checked": 74,
+     "minRatio": 1,
+     "failures": 1,
+     "examples": [
+      "! 1.00 (<4.5)"
+     ]
+    },
+    "detail": {
+     "checked": 86,
+     "minRatio": 1.04,
+     "failures": 1,
+     "examples": [
+      "! 1.04 (<4.5)"
+     ]
+    },
+    "form": {
+     "checked": 86,
+     "minRatio": 1,
+     "failures": 1,
+     "examples": [
+      "! 1.00 (<4.5)"
+     ]
+    },
+    "note": "Sampled from computed colours; gradients, images and backdrop blur are not modelled."
+   },
+   "reducedMotion": {
+    "activeAnimations": 0,
+    "hostTransition": "0.001s",
+    "longestMs": 1,
+    "pass": true
+   },
+   "invalidInputs": {
+    "tooLongLabel": true,
+    "duplicateLabel": true,
+    "scriptInjectionInert": true
+   }
+  },
+  "motion": [
+   "#host transition transform+ opacity 0.45s cubic-bezier(0.23, 1, 0.32, 1)",
+   "[data-act=\"filter:vacant\"] transition transform+ background-color 0.12s cubic-bezier(0.23, 1, 0.32, 1)",
+   ".btn transition transform+ background-color 0.12s cubic-bezier(0.23, 1, 0.32, 1)",
+   "open: transition opacity 250ms ease",
+   "open: transition transform 450ms cubic-bezier(0.23, 1, 0.32, 1)",
+   "close: transition opacity 231ms ease",
+   "close: transition opacity 185ms ease",
+   "close: transition transform 200ms cubic-bezier(0.23, 1, 0.32, 1)",
+   "menu: transition background-color 120ms ease",
+   "menu: transition opacity 231ms ease",
+   "menu: transition opacity 185ms ease",
+   "menu: transition transform 200ms cubic-bezier(0.23, 1, 0.32, 1)",
+   "menu: animation lmi 160ms linear"
+  ],
+  "summary": {
+   "checkInMs": 1068,
+   "clicksCheckIn": 4,
+   "worstFrame": 16.8,
+   "failures": 0
+  }
+ },
+ "uxpro": {
+  "design": "uxpro",
+  "load": {
+   "dclMs": 10.6,
+   "loadMs": 10.8,
+   "firstDrawMs": 32.9,
+   "fcpMs": 96,
+   "kb": 490,
+   "requests": 6,
+   "runs": 5
+  },
+  "tasks": [
+   {
+    "name": "find",
+    "ok": true,
+    "ms": 239,
+    "clicks": 2,
+    "keys": 6,
+    "err": ""
+   },
+   {
+    "name": "checkin",
+    "ok": true,
+    "ms": 291,
+    "clicks": 5,
+    "keys": 0,
+    "err": ""
+   },
+   {
+    "name": "validate",
+    "ok": true,
+    "ms": 218,
+    "clicks": 4,
+    "keys": 1,
+    "err": ""
+   },
+   {
+    "name": "addedit",
+    "ok": true,
+    "ms": 292,
+    "clicks": 5,
+    "keys": 0,
+    "err": ""
+   },
+   {
+    "name": "menu",
+    "ok": true,
+    "ms": 562,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   }
+  ],
+  "interaction": {
+   "search": {
+    "n": 6,
+    "medianMs": 25.5,
+    "p95Ms": 29.4
+   },
+   "select": {
+    "n": 4,
+    "medianMs": 31,
+    "p95Ms": 31.5
+   },
+   "filter": {
+    "n": 1,
+    "medianMs": 31.6,
+    "p95Ms": 31.6
+   },
+   "open": {
+    "n": 4,
+    "medianMs": 31.2,
+    "p95Ms": 32.1
+   },
+   "chip": {
+    "n": 1,
+    "medianMs": 30.6,
+    "p95Ms": 30.6
+   },
+   "write-checkin": {
+    "n": 1,
+    "medianMs": 13.6,
+    "p95Ms": 13.6
+   },
+   "submit": {
+    "n": 3,
+    "medianMs": 29.8,
+    "p95Ms": 30.7
+   },
+   "close-key": {
+    "n": 1,
+    "medianMs": 26.2,
+    "p95Ms": 26.2
+   },
+   "write-add": {
+    "n": 1,
+    "medianMs": 14.1,
+    "p95Ms": 14.1
+   },
+   "write-edit": {
+    "n": 1,
+    "medianMs": 13.9,
+    "p95Ms": 13.9
+   },
+   "menu": {
+    "n": 2,
+    "medianMs": 32.4,
+    "p95Ms": 32.4
+   },
+   "prop": {
+    "n": 1,
+    "medianMs": 30.5,
+    "p95Ms": 30.5
+   }
+  },
+  "frames": [],
+  "cls": 0.0002,
+  "longTasks": 0,
+  "consoleErrors": [],
+  "devices": {
+   "tablet": [
+    {
+     "name": "find",
+     "ok": true,
+     "ms": 250,
+     "clicks": 2,
+     "keys": 6,
+     "err": ""
+    },
+    {
+     "name": "checkin",
+     "ok": true,
+     "ms": 282,
+     "clicks": 5,
+     "keys": 0,
+     "err": ""
+    }
+   ],
+   "mobile": [
+    {
+     "name": "find",
+     "ok": true,
+     "ms": 240,
+     "clicks": 2,
+     "keys": 6,
+     "err": ""
+    },
+    {
+     "name": "checkin",
+     "ok": true,
+     "ms": 296,
+     "clicks": 5,
+     "keys": 0,
+     "err": ""
+    }
+   ]
+  },
+  "large": {
+   "rooms": 60,
+   "dom": 777,
+   "firstDraw": 45,
+   "scroll": {
+    "frames": 30,
+    "worstMs": 18,
+    "totalMs": 473
+   },
+   "search": {
+    "n": 3,
+    "medianMs": 17.8,
+    "p95Ms": 21.1
+   },
+   "filter": {
+    "n": 2,
+    "medianMs": 30.4,
+    "p95Ms": 30.4
+   },
+   "cls": 0.0004
+  },
+  "network": {
+   "slowLoadingShown": true,
+   "skeletonDuringLoad": true,
+   "busyStateShown": true,
+   "errorShownInForm": true,
+   "retrySucceeds": true
+  },
+  "quality": {
+   "keyboard": {
+    "slashFocusesSearch": true,
+    "enterOpensRoom": true,
+    "escapeClosesRoom": true,
+    "focusReturns": true,
+    "arrowMovesFocus": true,
+    "formAutofocus": true,
+    "enterSubmits": true,
+    "escapeClosesForm": true,
+    "focusReturnsFromForm": true,
+    "focusStaysInForm": true
+   },
+   "touch": {
+    "checked": 20,
+    "under44": 0,
+    "under24": 0,
+    "examples": []
+   },
+   "overflow": {
+    "320": 0,
+    "390": 0,
+    "768": 0,
+    "820": 0,
+    "1280": 0,
+    "1440": 0,
+    "1280×720": 0,
+    "390 stress": 0,
+    "320 stress": 0,
+    "640 (200% zoom of 1280)": 0
+   },
+   "contrast": {
+    "list": {
+     "checked": 65,
+     "minRatio": 5.56,
+     "failures": 0,
+     "examples": []
+    },
+    "detail": {
+     "checked": 75,
+     "minRatio": 5.56,
+     "failures": 0,
+     "examples": []
+    },
+    "form": {
+     "checked": 75,
+     "minRatio": 5.56,
+     "failures": 0,
+     "examples": []
+    },
+    "note": "Sampled from computed colours; gradients, images and backdrop blur are not modelled."
+   },
+   "reducedMotion": {
+    "activeAnimations": 0,
+    "hostTransition": "0s",
+    "longestMs": 0,
+    "pass": true
+   },
+   "invalidInputs": {
+    "tooLongLabel": true,
+    "duplicateLabel": true,
+    "scriptInjectionInert": true
+   }
+  },
+  "motion": [
+   "[data-act=\"filter:vacant\"] transition transform+ background-color+ border-color 0.12s cubic-bezier(0.23, 1, 0.32, 1)",
+   ".btn transition transform+ background-color+ border-color 0.12s cubic-bezier(0.23, 1, 0.32, 1)",
+   "menu: animation lmi 160ms linear"
+  ],
+  "summary": {
+   "checkInMs": 291,
+   "clicksCheckIn": 5,
+   "worstFrame": 0,
+   "failures": 0
+  }
+ },
+ "emil": {
+  "design": "emil",
+  "load": {
+   "dclMs": 11.8,
+   "loadMs": 12.1,
+   "firstDrawMs": 100.6,
+   "fcpMs": 120,
+   "kb": 206,
+   "requests": 4,
+   "runs": 5
+  },
+  "tasks": [
+   {
+    "name": "find",
+    "ok": true,
+    "ms": 263,
+    "clicks": 2,
+    "keys": 6,
+    "err": ""
+   },
+   {
+    "name": "checkin",
+    "ok": true,
+    "ms": 397,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   },
+   {
+    "name": "validate",
+    "ok": true,
+    "ms": 350,
+    "clicks": 3,
+    "keys": 1,
+    "err": ""
+   },
+   {
+    "name": "addedit",
+    "ok": true,
+    "ms": 667,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   },
+   {
+    "name": "menu",
+    "ok": true,
+    "ms": 593,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   }
+  ],
+  "interaction": {
+   "search": {
+    "n": 6,
+    "medianMs": 29.1,
+    "p95Ms": 33.3
+   },
+   "select": {
+    "n": 1,
+    "medianMs": 31.4,
+    "p95Ms": 31.4
+   },
+   "close-key": {
+    "n": 2,
+    "medianMs": 33,
+    "p95Ms": 33
+   },
+   "filter": {
+    "n": 1,
+    "medianMs": 30.8,
+    "p95Ms": 30.8
+   },
+   "open": {
+    "n": 4,
+    "medianMs": 31.1,
+    "p95Ms": 31.4
+   },
+   "chip": {
+    "n": 1,
+    "medianMs": 30.5,
+    "p95Ms": 30.5
+   },
+   "write-checkin": {
+    "n": 1,
+    "medianMs": 13.3,
+    "p95Ms": 13.3
+   },
+   "submit": {
+    "n": 3,
+    "medianMs": 30.4,
+    "p95Ms": 31.1
+   },
+   "write-add": {
+    "n": 1,
+    "medianMs": 11.7,
+    "p95Ms": 11.7
+   },
+   "write-edit": {
+    "n": 1,
+    "medianMs": 13.2,
+    "p95Ms": 13.2
+   },
+   "menu": {
+    "n": 2,
+    "medianMs": 31.8,
+    "p95Ms": 31.8
+   },
+   "prop": {
+    "n": 1,
+    "medianMs": 30.4,
+    "p95Ms": 30.4
+   }
+  },
+  "frames": [
+   {
+    "ev": "open-popover",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "close-popover",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "open-popover",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "close-popover",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.8,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "open-popover",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.8,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "close-popover",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.8,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "open-popover",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.8,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "close-popover",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.8,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "open-popover",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.8,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "close-popover",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.8,
+    "over33": 0,
+    "over50": 0
+   }
+  ],
+  "cls": 0.0001,
+  "longTasks": 1,
+  "consoleErrors": [],
+  "devices": {
+   "tablet": [
+    {
+     "name": "find",
+     "ok": true,
+     "ms": 263,
+     "clicks": 2,
+     "keys": 6,
+     "err": ""
+    },
+    {
+     "name": "checkin",
+     "ok": true,
+     "ms": 436,
+     "clicks": 4,
+     "keys": 0,
+     "err": ""
+    }
+   ],
+   "mobile": [
+    {
+     "name": "find",
+     "ok": true,
+     "ms": 264,
+     "clicks": 2,
+     "keys": 6,
+     "err": ""
+    },
+    {
+     "name": "checkin",
+     "ok": true,
+     "ms": 540,
+     "clicks": 4,
+     "keys": 0,
+     "err": ""
+    }
+   ]
+  },
+  "large": {
+   "rooms": 60,
+   "dom": 538,
+   "firstDraw": 95,
+   "scroll": {
+    "frames": 30,
+    "worstMs": 18,
+    "totalMs": 484
+   },
+   "search": {
+    "n": 3,
+    "medianMs": 22.7,
+    "p95Ms": 26.6
+   },
+   "filter": {
+    "n": 2,
+    "medianMs": 31.1,
+    "p95Ms": 31.1
+   },
+   "cls": 0.0002
+  },
+  "network": {
+   "slowLoadingShown": true,
+   "skeletonDuringLoad": true,
+   "busyStateShown": true,
+   "errorShownInForm": true,
+   "retrySucceeds": true
+  },
+  "quality": {
+   "keyboard": {
+    "slashFocusesSearch": true,
+    "enterOpensRoom": true,
+    "escapeClosesRoom": true,
+    "focusReturns": true,
+    "arrowMovesFocus": true,
+    "formAutofocus": true,
+    "enterSubmits": true,
+    "escapeClosesForm": true,
+    "focusReturnsFromForm": true,
+    "focusStaysInForm": true
+   },
+   "touch": {
+    "checked": 31,
+    "under44": 14,
+    "under24": 0,
+    "examples": [
+     "Hillview Guesthouse ▾ 181x34",
+     "INPUT 48x38",
+     "+ Add room 36x38",
+     "Check in to A2 84x32"
+    ]
+   },
+   "overflow": {
+    "320": 0,
+    "390": 0,
+    "768": 0,
+    "820": 0,
+    "1280": 0,
+    "1440": 0,
+    "1280×720": 0,
+    "390 stress": 0,
+    "320 stress": 0,
+    "640 (200% zoom of 1280)": 0
+   },
+   "contrast": {
+    "list": {
+     "checked": 52,
+     "minRatio": 4.63,
+     "failures": 0,
+     "examples": []
+    },
+    "detail": {
+     "checked": 63,
+     "minRatio": 4.63,
+     "failures": 0,
+     "examples": []
+    },
+    "form": {
+     "checked": 67,
+     "minRatio": 4.63,
+     "failures": 0,
+     "examples": []
+    },
+    "note": "Sampled from computed colours; gradients, images and backdrop blur are not modelled."
+   },
+   "reducedMotion": {
+    "activeAnimations": 2,
+    "hostTransition": "0.12s",
+    "longestMs": 120,
+    "pass": true
+   },
+   "invalidInputs": {
+    "tooLongLabel": true,
+    "duplicateLabel": true,
+    "scriptInjectionInert": true
+   }
+  },
+  "motion": [
+   "#host transition opacity+ transform 0.15s cubic-bezier(0.23, 1, 0.32, 1)",
+   "[data-act=\"filter:vacant\"] transition color 0.12s ease)",
+   "[data-room] transition background-color 1.2s ease)",
+   ".btn transition transform 0.16s cubic-bezier(0.23, 1, 0.32, 1)",
+   "open: transition transform 240ms cubic-bezier(0.23, 1, 0.32, 1)",
+   "open: transition background-color 1200ms ease",
+   "open: transition opacity 120ms ease",
+   "open: transition opacity 150ms cubic-bezier(0.23, 1, 0.32, 1)",
+   "open: transition transform 160ms cubic-bezier(0.23, 1, 0.32, 1)",
+   "close: transition transform 240ms cubic-bezier(0.23, 1, 0.32, 1)",
+   "close: transition background-color 1200ms ease",
+   "close: transition opacity 120ms ease",
+   "menu: animation lmi 140ms linear"
+  ],
+  "summary": {
+   "checkInMs": 397,
+   "clicksCheckIn": 4,
+   "worstFrame": 16.8,
+   "failures": 0
+  }
+ },
+ "frontend": {
+  "design": "frontend",
+  "load": {
+   "dclMs": 8.8,
+   "loadMs": 9,
+   "firstDrawMs": 31.6,
+   "fcpMs": 92,
+   "kb": 674,
+   "requests": 4,
+   "runs": 5
+  },
+  "tasks": [
+   {
+    "name": "find",
+    "ok": true,
+    "ms": 250,
+    "clicks": 2,
+    "keys": 6,
+    "err": ""
+   },
+   {
+    "name": "checkin",
+    "ok": true,
+    "ms": 408,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   },
+   {
+    "name": "validate",
+    "ok": true,
+    "ms": 337,
+    "clicks": 3,
+    "keys": 1,
+    "err": ""
+   },
+   {
+    "name": "addedit",
+    "ok": true,
+    "ms": 846,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   },
+   {
+    "name": "menu",
+    "ok": true,
+    "ms": 574,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   }
+  ],
+  "interaction": {
+   "search": {
+    "n": 6,
+    "medianMs": 25.3,
+    "p95Ms": 31.8
+   },
+   "select": {
+    "n": 1,
+    "medianMs": 32.2,
+    "p95Ms": 32.2
+   },
+   "close-key": {
+    "n": 2,
+    "medianMs": 33.4,
+    "p95Ms": 33.4
+   },
+   "filter": {
+    "n": 1,
+    "medianMs": 31.9,
+    "p95Ms": 31.9
+   },
+   "open": {
+    "n": 4,
+    "medianMs": 30.5,
+    "p95Ms": 31.3
+   },
+   "chip": {
+    "n": 1,
+    "medianMs": 30.1,
+    "p95Ms": 30.1
+   },
+   "write-checkin": {
+    "n": 1,
+    "medianMs": 14.2,
+    "p95Ms": 14.2
+   },
+   "submit": {
+    "n": 5,
+    "medianMs": 31.1,
+    "p95Ms": 35.8
+   },
+   "write-add": {
+    "n": 1,
+    "medianMs": 13.7,
+    "p95Ms": 13.7
+   },
+   "write-edit": {
+    "n": 1,
+    "medianMs": 13.2,
+    "p95Ms": 13.2
+   },
+   "menu": {
+    "n": 2,
+    "medianMs": 30.7,
+    "p95Ms": 30.7
+   },
+   "prop": {
+    "n": 1,
+    "medianMs": 30.8,
+    "p95Ms": 30.8
+   }
+  },
+  "frames": [
+   {
+    "ev": "open-modal",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.8,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "close-modal",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.8,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "open-modal",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "close-modal",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "open-modal",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.8,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "close-modal",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.8,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "open-modal",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.7,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "close-modal",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.8,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "open-modal",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.8,
+    "over33": 0,
+    "over50": 0
+   },
+   {
+    "ev": "close-modal",
+    "n": 42,
+    "max": 16.8,
+    "p95": 16.8,
+    "over33": 0,
+    "over50": 0
+   }
+  ],
+  "cls": 0.0042,
+  "longTasks": 0,
+  "consoleErrors": [],
+  "devices": {
+   "tablet": [
+    {
+     "name": "find",
+     "ok": true,
+     "ms": 251,
+     "clicks": 2,
+     "keys": 6,
+     "err": ""
+    },
+    {
+     "name": "checkin",
+     "ok": true,
+     "ms": 398,
+     "clicks": 4,
+     "keys": 0,
+     "err": ""
+    }
+   ],
+   "mobile": [
+    {
+     "name": "find",
+     "ok": true,
+     "ms": 248,
+     "clicks": 2,
+     "keys": 6,
+     "err": ""
+    },
+    {
+     "name": "checkin",
+     "ok": true,
+     "ms": 407,
+     "clicks": 4,
+     "keys": 0,
+     "err": ""
+    }
+   ]
+  },
+  "large": {
+   "rooms": 60,
+   "dom": 184,
+   "firstDraw": 29,
+   "scroll": {
+    "frames": 30,
+    "worstMs": 18,
+    "totalMs": 469
+   },
+   "search": {
+    "n": 3,
+    "medianMs": 22.9,
+    "p95Ms": 25.4
+   },
+   "filter": {
+    "n": 2,
+    "medianMs": 31.1,
+    "p95Ms": 31.1
+   },
+   "cls": 0.0045
+  },
+  "network": {
+   "slowLoadingShown": true,
+   "skeletonDuringLoad": true,
+   "busyStateShown": true,
+   "errorShownInForm": true,
+   "retrySucceeds": true
+  },
+  "quality": {
+   "keyboard": {
+    "slashFocusesSearch": true,
+    "enterOpensRoom": true,
+    "escapeClosesRoom": true,
+    "focusReturns": true,
+    "arrowMovesFocus": true,
+    "formAutofocus": true,
+    "enterSubmits": true,
+    "escapeClosesForm": true,
+    "focusReturnsFromForm": true,
+    "focusStaysInForm": true
+   },
+   "touch": {
+    "checked": 36,
+    "under44": 5,
+    "under24": 0,
+    "examples": [
+     "Hillview Guesthouse ▾ 170x40",
+     "Add room 97x40",
+     "Room ▲ 37x44",
+     "Previous 87x36"
+    ]
+   },
+   "overflow": {
+    "320": 0,
+    "390": 0,
+    "820": 0,
+    "1280": 0,
+    "1440": 0,
+    "390 stress": 0,
+    "320 stress": 0,
+    "640 (200% zoom of 1280)": 0
+   },
+   "contrast": {
+    "list": {
+     "checked": 51,
+     "minRatio": 5.18,
+     "failures": 0,
+     "examples": []
+    },
+    "detail": {
+     "checked": 62,
+     "minRatio": 5.18,
+     "failures": 0,
+     "examples": []
+    },
+    "form": {
+     "checked": 62,
+     "minRatio": 5.18,
+     "failures": 0,
+     "examples": []
+    },
+    "note": "Sampled from computed colours; gradients, images and backdrop blur are not modelled."
+   },
+   "reducedMotion": {
+    "activeAnimations": 0,
+    "hostTransition": "0.001s",
+    "longestMs": 1,
+    "pass": true
+   },
+   "invalidInputs": {
+    "tooLongLabel": true,
+    "duplicateLabel": true,
+    "scriptInjectionInert": true
+   }
+  },
+  "motion": [
+   "#host transition opacity+ transform 0.15s ease, cubic-bezier(0.2, 0.8, 0.2, 1)",
+   ".btn transition background-color+ border-color 0.12s ease, ease)",
+   "open: transition opacity 150ms ease",
+   "open: transition transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1)",
+   "menu: animation lmi 140ms linear"
+  ],
+  "summary": {
+   "checkInMs": 408,
+   "clicksCheckIn": 4,
+   "worstFrame": 16.8,
+   "failures": 0
+  }
+ },
+ "unslop": {
+  "design": "unslop",
+  "load": {
+   "dclMs": 11.5,
+   "loadMs": 11.8,
+   "firstDrawMs": 36,
+   "fcpMs": 72,
+   "kb": 669,
+   "requests": 4,
+   "runs": 5
+  },
+  "tasks": [
+   {
+    "name": "find",
+    "ok": true,
+    "ms": 240,
+    "clicks": 2,
+    "keys": 6,
+    "err": ""
+   },
+   {
+    "name": "checkin",
+    "ok": true,
+    "ms": 597,
+    "clicks": 5,
+    "keys": 0,
+    "err": ""
+   },
+   {
+    "name": "validate",
+    "ok": true,
+    "ms": 543,
+    "clicks": 4,
+    "keys": 1,
+    "err": ""
+   },
+   {
+    "name": "addedit",
+    "ok": true,
+    "ms": 798,
+    "clicks": 5,
+    "keys": 0,
+    "err": ""
+   },
+   {
+    "name": "menu",
+    "ok": true,
+    "ms": 125,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   }
+  ],
+  "interaction": {
+   "search": {
+    "n": 6,
+    "medianMs": 22.4,
+    "p95Ms": 32.5
+   },
+   "select": {
+    "n": 4,
+    "medianMs": 30.9,
+    "p95Ms": 31.3
+   },
+   "filter": {
+    "n": 1,
+    "medianMs": 30.5,
+    "p95Ms": 30.5
+   },
+   "open": {
+    "n": 4,
+    "medianMs": 31.8,
+    "p95Ms": 31.8
+   },
+   "chip": {
+    "n": 1,
+    "medianMs": 29.9,
+    "p95Ms": 29.9
+   },
+   "write-checkin": {
+    "n": 1,
+    "medianMs": 13,
+    "p95Ms": 13
+   },
+   "submit": {
+    "n": 3,
+    "medianMs": 29.8,
+    "p95Ms": 30.5
+   },
+   "close-key": {
+    "n": 1,
+    "medianMs": 24.5,
+    "p95Ms": 24.5
+   },
+   "write-add": {
+    "n": 1,
+    "medianMs": 13.7,
+    "p95Ms": 13.7
+   },
+   "write-edit": {
+    "n": 1,
+    "medianMs": 12.7,
+    "p95Ms": 12.7
+   },
+   "menu": {
+    "n": 2,
+    "medianMs": 31.4,
+    "p95Ms": 31.4
+   },
+   "prop": {
+    "n": 1,
+    "medianMs": 31.9,
+    "p95Ms": 31.9
+   }
+  },
+  "frames": [],
+  "cls": 0.0003,
+  "longTasks": 0,
+  "consoleErrors": [],
+  "devices": {
+   "tablet": [
+    {
+     "name": "find",
+     "ok": true,
+     "ms": 240,
+     "clicks": 2,
+     "keys": 6,
+     "err": ""
+    },
+    {
+     "name": "checkin",
+     "ok": true,
+     "ms": 583,
+     "clicks": 5,
+     "keys": 0,
+     "err": ""
+    }
+   ],
+   "mobile": [
+    {
+     "name": "find",
+     "ok": true,
+     "ms": 249,
+     "clicks": 2,
+     "keys": 6,
+     "err": ""
+    },
+    {
+     "name": "checkin",
+     "ok": true,
+     "ms": 612,
+     "clicks": 5,
+     "keys": 0,
+     "err": ""
+    }
+   ]
+  },
+  "large": {
+   "rooms": 60,
+   "dom": 415,
+   "firstDraw": 41,
+   "scroll": {
+    "frames": 30,
+    "worstMs": 18,
+    "totalMs": 474
+   },
+   "search": {
+    "n": 3,
+    "medianMs": 21.2,
+    "p95Ms": 22
+   },
+   "filter": {
+    "n": 2,
+    "medianMs": 30.2,
+    "p95Ms": 30.2
+   },
+   "cls": 0.0004
+  },
+  "network": {
+   "slowLoadingShown": true,
+   "skeletonDuringLoad": true,
+   "busyStateShown": true,
+   "errorShownInForm": true,
+   "retrySucceeds": true
+  },
+  "quality": {
+   "keyboard": {
+    "slashFocusesSearch": true,
+    "enterOpensRoom": true,
+    "escapeClosesRoom": true,
+    "focusReturns": true,
+    "arrowMovesFocus": true,
+    "formAutofocus": true,
+    "enterSubmits": true,
+    "escapeClosesForm": true,
+    "focusReturnsFromForm": true,
+    "focusStaysInForm": true
+   },
+   "touch": {
+    "checked": 21,
+    "under44": 1,
+    "under24": 0,
+    "examples": [
+     "All13 39x44"
+    ]
+   },
+   "overflow": {
+    "320": 0,
+    "390": 0,
+    "820": 0,
+    "1280": 0,
+    "1440": 0,
+    "390 stress": 0,
+    "320 stress": 0,
+    "640 (200% zoom of 1280)": 0
+   },
+   "contrast": {
+    "list": {
+     "checked": 41,
+     "minRatio": 4.54,
+     "failures": 0,
+     "examples": []
+    },
+    "detail": {
+     "checked": 50,
+     "minRatio": 4.54,
+     "failures": 0,
+     "examples": []
+    },
+    "form": {
+     "checked": 50,
+     "minRatio": 4.54,
+     "failures": 0,
+     "examples": []
+    },
+    "note": "Sampled from computed colours; gradients, images and backdrop blur are not modelled."
+   },
+   "reducedMotion": {
+    "activeAnimations": 0,
+    "hostTransition": "0s",
+    "longestMs": 0,
+    "pass": true
+   },
+   "invalidInputs": {
+    "tooLongLabel": true,
+    "duplicateLabel": true,
+    "scriptInjectionInert": true
+   }
+  },
+  "motion": [
+   "open: animation in 160ms linear"
+  ],
+  "summary": {
+   "checkInMs": 597,
+   "clicksCheckIn": 5,
+   "worstFrame": 0,
+   "failures": 0
+  }
+ },
+ "stayflow": {
+  "design": "stayflow",
+  "load": {
+   "dclMs": 11.6,
+   "loadMs": 11.8,
+   "firstDrawMs": 49.1,
+   "fcpMs": 84,
+   "kb": 231,
+   "requests": 5,
+   "runs": 5
+  },
+  "tasks": [
+   {
+    "name": "find",
+    "ok": true,
+    "ms": 240,
+    "clicks": 2,
+    "keys": 6,
+    "err": ""
+   },
+   {
+    "name": "checkin",
+    "ok": true,
+    "ms": 168,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   },
+   {
+    "name": "validate",
+    "ok": true,
+    "ms": 151,
+    "clicks": 3,
+    "keys": 1,
+    "err": ""
+   },
+   {
+    "name": "addedit",
+    "ok": true,
+    "ms": 351,
+    "clicks": 5,
+    "keys": 0,
+    "err": ""
+   },
+   {
+    "name": "menu",
+    "ok": true,
+    "ms": 400,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   }
+  ],
+  "interaction": {
+   "search": {
+    "n": 6,
+    "medianMs": 28.9,
+    "p95Ms": 34.3
+   },
+   "select": {
+    "n": 2,
+    "medianMs": 30.7,
+    "p95Ms": 30.7
+   },
+   "close-key": {
+    "n": 3,
+    "medianMs": 26.1,
+    "p95Ms": 31.3
+   },
+   "filter": {
+    "n": 1,
+    "medianMs": 29.9,
+    "p95Ms": 29.9
+   },
+   "open": {
+    "n": 4,
+    "medianMs": 31,
+    "p95Ms": 34.6
+   },
+   "chip": {
+    "n": 1,
+    "medianMs": 29.5,
+    "p95Ms": 29.5
+   },
+   "write-checkin": {
+    "n": 1,
+    "medianMs": 11.5,
+    "p95Ms": 11.5
+   },
+   "submit": {
+    "n": 3,
+    "medianMs": 28.6,
+    "p95Ms": 29
+   },
+   "write-add": {
+    "n": 1,
+    "medianMs": 10.4,
+    "p95Ms": 10.4
+   },
+   "write-edit": {
+    "n": 1,
+    "medianMs": 10.8,
+    "p95Ms": 10.8
+   },
+   "menu": {
+    "n": 2,
+    "medianMs": 29.9,
+    "p95Ms": 29.9
+   },
+   "prop": {
+    "n": 1,
+    "medianMs": 29.6,
+    "p95Ms": 29.6
+   }
+  },
+  "frames": [],
+  "cls": 0,
+  "longTasks": 0,
+  "consoleErrors": [],
+  "devices": {
+   "tablet": [
+    {
+     "name": "find",
+     "ok": true,
+     "ms": 238,
+     "clicks": 2,
+     "keys": 6,
+     "err": ""
+    },
+    {
+     "name": "checkin",
+     "ok": true,
+     "ms": 531,
+     "clicks": 4,
+     "keys": 0,
+     "err": ""
+    }
+   ],
+   "mobile": [
+    {
+     "name": "find",
+     "ok": true,
+     "ms": 237,
+     "clicks": 2,
+     "keys": 6,
+     "err": ""
+    },
+    {
+     "name": "checkin",
+     "ok": true,
+     "ms": 530,
+     "clicks": 4,
+     "keys": 0,
+     "err": ""
+    }
+   ]
+  },
+  "large": {
+   "rooms": 60,
+   "dom": 793,
+   "firstDraw": 44,
+   "scroll": {
+    "frames": 30,
+    "worstMs": 18,
+    "totalMs": 481
+   },
+   "search": {
+    "n": 3,
+    "medianMs": 20.6,
+    "p95Ms": 22
+   },
+   "filter": {
+    "n": 2,
+    "medianMs": 30.8,
+    "p95Ms": 30.8
+   },
+   "cls": 0
+  },
+  "network": {
+   "slowLoadingShown": true,
+   "skeletonDuringLoad": true,
+   "busyStateShown": true,
+   "errorShownInForm": true,
+   "retrySucceeds": true
+  },
+  "quality": {
+   "keyboard": {
+    "slashFocusesSearch": true,
+    "enterOpensRoom": true,
+    "escapeClosesRoom": true,
+    "focusReturns": true,
+    "arrowMovesFocus": true,
+    "formAutofocus": true,
+    "enterSubmits": true,
+    "escapeClosesForm": true,
+    "focusReturnsFromForm": true,
+    "focusStaysInForm": true
+   },
+   "touch": {
+    "checked": 27,
+    "under44": 0,
+    "under24": 0,
+    "examples": []
+   },
+   "overflow": {
+    "320": 0,
+    "390": 0,
+    "768": 0,
+    "820": 0,
+    "1280": 0,
+    "1440": 0,
+    "1280×720": 0,
+    "390 stress": 0,
+    "320 stress": 0,
+    "640 (200% zoom of 1280)": 0
+   },
+   "contrast": {
+    "list": {
+     "checked": 87,
+     "minRatio": 5.06,
+     "failures": 0,
+     "examples": []
+    },
+    "detail": {
+     "checked": 87,
+     "minRatio": 5.06,
+     "failures": 0,
+     "examples": []
+    },
+    "form": {
+     "checked": 89,
+     "minRatio": 5.06,
+     "failures": 0,
+     "examples": []
+    },
+    "note": "Sampled from computed colours; gradients, images and backdrop blur are not modelled."
+   },
+   "reducedMotion": {
+    "activeAnimations": 0,
+    "hostTransition": "0.12s",
+    "longestMs": 120,
+    "pass": true
+   },
+   "invalidInputs": {
+    "tooLongLabel": true,
+    "duplicateLabel": true,
+    "scriptInjectionInert": true
+   }
+  },
+  "motion": [
+   ".btn transition transform+ background-color+ border-color 0.12s cubic-bezier(0.23, 1, 0.32, 1)",
+   "menu: transition background-color 120ms ease",
+   "menu: animation menu-in 150ms linear"
+  ],
+  "summary": {
+   "checkInMs": 168,
+   "clicksCheckIn": 4,
+   "worstFrame": 0,
+   "failures": 0
+  }
+ },
+ "glass": {
+  "design": "glass",
+  "load": {
+   "dclMs": 8.9,
+   "loadMs": 9.1,
+   "firstDrawMs": 42.1,
+   "fcpMs": 68,
+   "kb": 254,
+   "requests": 5,
+   "runs": 5
+  },
+  "tasks": [
+   {
+    "name": "find",
+    "ok": true,
+    "ms": 245,
+    "clicks": 2,
+    "keys": 6,
+    "err": ""
+   },
+   {
+    "name": "checkin",
+    "ok": true,
+    "ms": 171,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   },
+   {
+    "name": "validate",
+    "ok": true,
+    "ms": 108,
+    "clicks": 3,
+    "keys": 1,
+    "err": ""
+   },
+   {
+    "name": "addedit",
+    "ok": true,
+    "ms": 325,
+    "clicks": 5,
+    "keys": 0,
+    "err": ""
+   },
+   {
+    "name": "menu",
+    "ok": true,
+    "ms": 591,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   }
+  ],
+  "interaction": {
+   "search": {
+    "n": 6,
+    "medianMs": 24.1,
+    "p95Ms": 32.2
+   },
+   "select": {
+    "n": 2,
+    "medianMs": 30.5,
+    "p95Ms": 30.5
+   },
+   "close-key": {
+    "n": 3,
+    "medianMs": 23.9,
+    "p95Ms": 29.7
+   },
+   "filter": {
+    "n": 1,
+    "medianMs": 29.1,
+    "p95Ms": 29.1
+   },
+   "open": {
+    "n": 4,
+    "medianMs": 31.8,
+    "p95Ms": 32
+   },
+   "chip": {
+    "n": 1,
+    "medianMs": 30.3,
+    "p95Ms": 30.3
+   },
+   "write-checkin": {
+    "n": 1,
+    "medianMs": 12.8,
+    "p95Ms": 12.8
+   },
+   "submit": {
+    "n": 3,
+    "medianMs": 29.7,
+    "p95Ms": 31.2
+   },
+   "write-add": {
+    "n": 1,
+    "medianMs": 13.5,
+    "p95Ms": 13.5
+   },
+   "write-edit": {
+    "n": 1,
+    "medianMs": 13.2,
+    "p95Ms": 13.2
+   },
+   "menu": {
+    "n": 2,
+    "medianMs": 31.9,
+    "p95Ms": 31.9
+   },
+   "prop": {
+    "n": 1,
+    "medianMs": 30,
+    "p95Ms": 30
+   }
+  },
+  "frames": [],
+  "cls": 0,
+  "longTasks": 0,
+  "consoleErrors": [],
+  "devices": {
+   "tablet": [
+    {
+     "name": "find",
+     "ok": true,
+     "ms": 244,
+     "clicks": 2,
+     "keys": 6,
+     "err": ""
+    },
+    {
+     "name": "checkin",
+     "ok": true,
+     "ms": 544,
+     "clicks": 4,
+     "keys": 0,
+     "err": ""
+    }
+   ],
+   "mobile": [
+    {
+     "name": "find",
+     "ok": true,
+     "ms": 250,
+     "clicks": 2,
+     "keys": 6,
+     "err": ""
+    },
+    {
+     "name": "checkin",
+     "ok": true,
+     "ms": 530,
+     "clicks": 4,
+     "keys": 0,
+     "err": ""
+    }
+   ]
+  },
+  "large": {
+   "rooms": 60,
+   "dom": 841,
+   "firstDraw": 42,
+   "scroll": {
+    "frames": 30,
+    "worstMs": 19,
+    "totalMs": 470
+   },
+   "search": {
+    "n": 3,
+    "medianMs": 20.7,
+    "p95Ms": 21.3
+   },
+   "filter": {
+    "n": 2,
+    "medianMs": 30.4,
+    "p95Ms": 30.4
+   },
+   "cls": 0
+  },
+  "network": {
+   "slowLoadingShown": true,
+   "skeletonDuringLoad": true,
+   "busyStateShown": true,
+   "errorShownInForm": true,
+   "retrySucceeds": true
+  },
+  "quality": {
+   "keyboard": {
+    "slashFocusesSearch": true,
+    "enterOpensRoom": true,
+    "escapeClosesRoom": true,
+    "focusReturns": true,
+    "arrowMovesFocus": true,
+    "formAutofocus": true,
+    "enterSubmits": true,
+    "escapeClosesForm": true,
+    "focusReturnsFromForm": true,
+    "focusStaysInForm": true
+   },
+   "touch": {
+    "checked": 27,
+    "under44": 0,
+    "under24": 0,
+    "examples": []
+   },
+   "overflow": {
+    "320": 0,
+    "390": 0,
+    "768": 0,
+    "820": 0,
+    "1280": 0,
+    "1440": 0,
+    "1280×720": 0,
+    "390 stress": 0,
+    "320 stress": 0,
+    "640 (200% zoom of 1280)": 0
+   },
+   "contrast": {
+    "list": {
+     "checked": 94,
+     "minRatio": 5.28,
+     "failures": 0,
+     "examples": []
+    },
+    "detail": {
+     "checked": 108,
+     "minRatio": 5.28,
+     "failures": 0,
+     "examples": []
+    },
+    "form": {
+     "checked": 110,
+     "minRatio": 5.28,
+     "failures": 0,
+     "examples": []
+    },
+    "note": "Sampled from computed colours; gradients, images and backdrop blur are not modelled."
+   },
+   "reducedMotion": {
+    "activeAnimations": 0,
+    "hostTransition": "0.12s",
+    "longestMs": 120,
+    "pass": true
+   },
+   "invalidInputs": {
+    "tooLongLabel": true,
+    "duplicateLabel": true,
+    "scriptInjectionInert": true
+   }
+  },
+  "motion": [
+   "[data-act=\"filter:vacant\"] transition transform+ background-color+ box-shadow 0.12s cubic-bezier(0.23, 1, 0.32, 1)",
+   ".btn transition transform+ background-color+ box-shadow 0.12s cubic-bezier(0.23, 1, 0.32, 1)",
+   "menu: transition background-color 120ms ease",
+   "menu: animation menu-in 150ms linear"
+  ],
+  "summary": {
+   "checkInMs": 171,
+   "clicksCheckIn": 4,
+   "worstFrame": 0,
+   "failures": 0
+  }
+ },
+ "glass-dark": {
+  "design": "glass",
+  "load": {
+   "dclMs": 9.1,
+   "loadMs": 9.3,
+   "firstDrawMs": 42.6,
+   "fcpMs": 68,
+   "kb": 254,
+   "requests": 5,
+   "runs": 5
+  },
+  "tasks": [
+   {
+    "name": "find",
+    "ok": true,
+    "ms": 267,
+    "clicks": 2,
+    "keys": 6,
+    "err": ""
+   },
+   {
+    "name": "checkin",
+    "ok": true,
+    "ms": 171,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   },
+   {
+    "name": "validate",
+    "ok": true,
+    "ms": 105,
+    "clicks": 3,
+    "keys": 1,
+    "err": ""
+   },
+   {
+    "name": "addedit",
+    "ok": true,
+    "ms": 312,
+    "clicks": 5,
+    "keys": 0,
+    "err": ""
+   },
+   {
+    "name": "menu",
+    "ok": true,
+    "ms": 572,
+    "clicks": 4,
+    "keys": 0,
+    "err": ""
+   }
+  ],
+  "interaction": {
+   "search": {
+    "n": 6,
+    "medianMs": 27.1,
+    "p95Ms": 28.7
+   },
+   "select": {
+    "n": 2,
+    "medianMs": 29.2,
+    "p95Ms": 29.2
+   },
+   "close-key": {
+    "n": 3,
+    "medianMs": 23.3,
+    "p95Ms": 30
+   },
+   "filter": {
+    "n": 1,
+    "medianMs": 29.7,
+    "p95Ms": 29.7
+   },
+   "open": {
+    "n": 4,
+    "medianMs": 31.2,
+    "p95Ms": 31.5
+   },
+   "chip": {
+    "n": 1,
+    "medianMs": 30.8,
+    "p95Ms": 30.8
+   },
+   "write-checkin": {
+    "n": 1,
+    "medianMs": 11.9,
+    "p95Ms": 11.9
+   },
+   "submit": {
+    "n": 3,
+    "medianMs": 29.8,
+    "p95Ms": 30.6
+   },
+   "write-add": {
+    "n": 1,
+    "medianMs": 12.8,
+    "p95Ms": 12.8
+   },
+   "write-edit": {
+    "n": 1,
+    "medianMs": 12.6,
+    "p95Ms": 12.6
+   },
+   "menu": {
+    "n": 2,
+    "medianMs": 32.1,
+    "p95Ms": 32.1
+   },
+   "prop": {
+    "n": 1,
+    "medianMs": 31.5,
+    "p95Ms": 31.5
+   }
+  },
+  "frames": [],
+  "cls": 0,
+  "longTasks": 0,
+  "consoleErrors": [],
+  "devices": {
+   "tablet": [
+    {
+     "name": "find",
+     "ok": true,
+     "ms": 241,
+     "clicks": 2,
+     "keys": 6,
+     "err": ""
+    },
+    {
+     "name": "checkin",
+     "ok": true,
+     "ms": 546,
+     "clicks": 4,
+     "keys": 0,
+     "err": ""
+    }
+   ],
+   "mobile": [
+    {
+     "name": "find",
+     "ok": true,
+     "ms": 242,
+     "clicks": 2,
+     "keys": 6,
+     "err": ""
+    },
+    {
+     "name": "checkin",
+     "ok": true,
+     "ms": 532,
+     "clicks": 4,
+     "keys": 0,
+     "err": ""
+    }
+   ]
+  },
+  "large": {
+   "rooms": 60,
+   "dom": 840,
+   "firstDraw": 47,
+   "scroll": {
+    "frames": 30,
+    "worstMs": 18,
+    "totalMs": 482
+   },
+   "search": {
+    "n": 3,
+    "medianMs": 18.9,
+    "p95Ms": 22.4
+   },
+   "filter": {
+    "n": 2,
+    "medianMs": 32,
+    "p95Ms": 32
+   },
+   "cls": 0
+  },
+  "network": {
+   "slowLoadingShown": true,
+   "skeletonDuringLoad": true,
+   "busyStateShown": true,
+   "errorShownInForm": true,
+   "retrySucceeds": true
+  },
+  "quality": {
+   "keyboard": {
+    "slashFocusesSearch": true,
+    "enterOpensRoom": true,
+    "escapeClosesRoom": true,
+    "focusReturns": true,
+    "arrowMovesFocus": true,
+    "formAutofocus": true,
+    "enterSubmits": true,
+    "escapeClosesForm": true,
+    "focusReturnsFromForm": true,
+    "focusStaysInForm": true
+   },
+   "touch": {
+    "checked": 27,
+    "under44": 0,
+    "under24": 0,
+    "examples": []
+   },
+   "overflow": {
+    "320": 0,
+    "390": 0,
+    "768": 0,
+    "820": 0,
+    "1280": 0,
+    "1440": 0,
+    "1280×720": 0,
+    "390 stress": 0,
+    "320 stress": 0,
+    "640 (200% zoom of 1280)": 0
+   },
+   "contrast": {
+    "list": {
+     "checked": 94,
+     "minRatio": 5.74,
+     "failures": 0,
+     "examples": []
+    },
+    "detail": {
+     "checked": 108,
+     "minRatio": 5.74,
+     "failures": 0,
+     "examples": []
+    },
+    "form": {
+     "checked": 110,
+     "minRatio": 5.74,
+     "failures": 0,
+     "examples": []
+    },
+    "note": "Sampled from computed colours; gradients, images and backdrop blur are not modelled."
+   },
+   "reducedMotion": {
+    "activeAnimations": 0,
+    "hostTransition": "0.12s",
+    "longestMs": 120,
+    "pass": true
+   },
+   "invalidInputs": {
+    "tooLongLabel": true,
+    "duplicateLabel": true,
+    "scriptInjectionInert": true
+   }
+  },
+  "motion": [
+   "[data-act=\"filter:vacant\"] transition transform+ background-color+ box-shadow 0.12s cubic-bezier(0.23, 1, 0.32, 1)",
+   ".btn transition transform+ background-color+ box-shadow 0.12s cubic-bezier(0.23, 1, 0.32, 1)",
+   "menu: transition background-color 120ms ease",
+   "menu: animation menu-in 150ms linear"
+  ],
+  "summary": {
+   "checkInMs": 171,
+   "clicksCheckIn": 4,
+   "worstFrame": 0,
+   "failures": 0
+  }
+ }
+}

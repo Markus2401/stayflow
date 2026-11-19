@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sign in · Stayflow glass preview</title>
+<script>/* theme before first paint: ?theme, saved choice, then the OS */ (() => { const q = new URLSearchParams(location.search); let t = q.get('theme'), g = q.get('glass'); try { t ||= localStorage.getItem('sf-glass:theme'); g ||= localStorage.getItem('sf-glass:glass'); } catch {} document.documentElement.dataset.theme = t || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); document.documentElement.dataset.glass = g || 'full'; })();</script>
+<link rel="stylesheet" href="glass.css">
+<style>
+/* Sign-in is the one brand moment: a lit environment for the glass card. Static gradients, no animation loop. */
+body { display: grid; place-items: center; min-height: 100dvh; padding: 24px 16px; overflow-x: hidden;
+  background: radial-gradient(700px 420px at 50% 18%, rgb(124 125 240 / .28), transparent 70%), radial-gradient(520px 360px at 82% 88%, rgb(180 182 200 / .16), transparent 70%), var(--canvas); }
+[data-theme=light] body { background: radial-gradient(700px 420px at 50% 18%, rgb(94 95 217 / .18), transparent 70%), radial-gradient(520px 360px at 82% 88%, rgb(150 152 170 / .2), transparent 70%), var(--canvas); }
+.wrap { width: min(400px, 100%); display: grid; gap: 22px; justify-items: center; text-align: center; }
+.tile.big { width: 56px; height: 56px; border-radius: 16px; } .tile.big svg { width: 32px; height: 32px; }
+h1 { font-size: 28px; line-height: 34px; font-weight: 590; letter-spacing: -.028em; }
+.sub { color: var(--muted); margin-top: 6px; }
+.card { width: 100%; padding: 22px; border-radius: 22px; text-align: left; }
+.card > * { position: relative; z-index: 2; }
+.card form { display: grid; gap: 14px; }
+.card .btn { min-height: 44px; width: 100%; font-size: 15px; }
+.or { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 12.5px; } .or::before, .or::after { content: ""; flex: 1; height: 1px; background: var(--line-2); }
+.preview { font-size: 12.5px; color: var(--muted); }
+.top { position: fixed; top: 12px; right: 12px; display: flex; gap: 6px; padding: 4px; border-radius: 99px; }
+.top > * { position: relative; z-index: 2; }
+.top .icon-btn { width: 40px; height: 40px; }
+@media (max-width: 47.99em) { .card .btn, .f-field input { min-height: 48px; font-size: 16px; } .top .icon-btn { width: 44px; height: 44px; } }
+</style></head>
+<body>
+<div class="top glass" role="toolbar" aria-label="Display"><button class="icon-btn" type="button" data-ui="glass" aria-label="Reduce transparency" aria-pressed="false"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg></button><button class="icon-btn" type="button" data-ui="theme" aria-label="Dark theme" aria-pressed="false"></button></div>
+<main class="wrap">
+  <span class="tile big" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 21V10.5C5 6.4 8.1 3 12 3s7 3.4 7 7.5V21" fill="none" stroke="#E4E4EC" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="10" r="2" fill="#A3A4FF"/></svg></span>
+  <div><h1>Sign in to Stayflow</h1><p class="sub">The front desk for your guesthouse.</p></div>
+  <section class="card glass thick lit" aria-label="Sign in">
+    <form id="f" novalidate>
+      <div class="f-field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="username" spellcheck="false" required aria-describedby="e-email"><p class="f-error" id="e-email" hidden></p></div>
+      <div class="f-field"><label for="pw">Password</label><input id="pw" type="password" autocomplete="current-password" required aria-describedby="e-pw"><p class="f-error" id="e-pw" hidden></p></div>
+      <button class="btn btn-primary" type="submit">Continue</button>
+      <p class="or">or</p>
+      <button class="btn btn-secondary" type="button" disabled title="Concept only">Continue with a passkey · concept</button>
+    </form>
+  </section>
+  <p class="preview">Design preview. Nothing you type leaves this page; Continue opens the Liquid Glass candidate with synthetic data.</p>
+</main>
+<script>
+// Preview only: validates locally and opens the Lab candidate. The password value is never read beyond "is it empty".
+const root = document.documentElement, moon = '<path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/>', sun = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>';
+const sync = () => { const d = root.dataset.theme === 'dark'; const t = document.querySelector('[data-ui=theme]'); t.setAttribute('aria-pressed', d); t.innerHTML = `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">${d ? moon : sun}</svg>`; document.querySelector('[data-ui=glass]').setAttribute('aria-pressed', root.dataset.glass === 'reduced'); };
+sync();
+document.addEventListener('click', e => { const b = e.target.closest('[data-ui]'); if (!b) return; const k = b.dataset.ui; if (k === 'theme') root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark'; else root.dataset.glass = root.dataset.glass === 'reduced' ? 'full' : 'reduced'; try { localStorage.setItem('sf-glass:' + k, root.dataset[k === 'theme' ? 'theme' : 'glass']); } catch {} sync(); });
+const err = (id, msg) => { const el = document.getElementById('e-' + id), input = document.getElementById(id === 'pw' ? 'pw' : 'email'); el.hidden = !msg; el.textContent = msg || ''; input.setAttribute('aria-invalid', !!msg); };
+document.getElementById('f').addEventListener('submit', e => {
+  e.preventDefault(); const email = document.getElementById('email'), pw = document.getElementById('pw');
+  const em = !email.value.trim() ? 'Enter your work email.' : !email.checkValidity() ? 'Enter an email address like name@example.com.' : '', pm = pw.value ? '' : 'Enter your password.';
+  err('email', em); err('pw', pm); if (em || pm) { (em ? email : pw).focus(); return; }
+  pw.value = ''; location.href = `../frame.html?design=glass&theme=${root.dataset.theme}`;
+});
+let raf = 0; document.addEventListener('pointermove', e => { const g = e.pointerType === 'mouse' && e.target.closest('.glass.lit'); if (!g || raf) return; raf = requestAnimationFrame(() => { raf = 0; const r = g.getBoundingClientRect(); g.style.setProperty('--lx', `${e.clientX - r.left}px`); g.style.setProperty('--ly', `${e.clientY - r.top}px`); }); }, { passive: true });
+</script>
+</body></html>

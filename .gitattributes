@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.pdf binary
+*.zip binary
+*.ttf binary
+docs/vendor/unslop-LICENSE.txt -text whitespace=-blank-at-eol,-blank-at-eof
+prototypes/stayflow/fonts/*-OFL.txt -text whitespace=-blank-at-eol,-blank-at-eof
+src/fonts/*-OFL.txt -text whitespace=-blank-at-eol,-blank-at-eof

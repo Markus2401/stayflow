@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stayflow glass family · Design Lab</title>
+<script>(() => { const q = new URLSearchParams(location.search); let t = q.get('theme'), g = q.get('glass'); try { t ||= localStorage.getItem('sf-glass:theme'); g ||= localStorage.getItem('sf-glass:glass'); } catch {} document.documentElement.dataset.theme = t || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); document.documentElement.dataset.glass = g || 'full'; })();</script>
+<link rel="stylesheet" href="glass.css">
+<style>
+/* Liquid Glass family concepts (007B.6.1): synthetic, not built. Glass only for floating navigation and controls; content solid. */
+.page { max-width: 1400px; margin: 0 auto; padding: 24px 16px 56px; display: grid; gap: 24px; }
+.intro h1 { font-size: 24px; line-height: 30px; font-weight: 590; letter-spacing: -.022em; margin-top: 8px; }
+.intro p { color: var(--muted); max-width: 72ch; margin-top: 6px; }
+.tag { display: inline-flex; padding: 2px 9px; border-radius: 99px; background: var(--accent-wash); color: var(--accent); font-size: 12px; font-weight: 510; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 28px; align-items: start; }
+.wide { grid-column: 1 / -1; }
+figure { margin: 0; display: grid; gap: 10px; }
+figcaption { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; } figcaption b { font-size: 15px; font-weight: 590; } figcaption span:last-child { color: var(--muted); font-size: 13px; }
+.device { position: relative; overflow: hidden; border-radius: 34px; background: var(--canvas); box-shadow: 0 0 0 1px var(--line-2), 0 24px 60px -24px rgb(0 0 0 / .45); }
+.phone { width: 100%; max-width: 390px; height: 780px; }
+.scroll { height: 100%; overflow-y: auto; padding: 0 14px 110px; scrollbar-width: none; }
+.hero { margin: 0 -14px; padding: 56px 20px 26px; background: radial-gradient(420px 220px at 30% 0%, rgb(124 125 240 / .35), transparent 70%), linear-gradient(#202027, var(--canvas)); color: #EDEDF2; }
+[data-theme=light] .hero { background: radial-gradient(420px 220px at 30% 0%, rgb(94 95 217 / .25), transparent 70%), linear-gradient(#E4E4EC, var(--canvas)); color: var(--ink); }
+.hero small { color: inherit; opacity: .75; } .hero h2 { margin-top: 10px; font-size: 30px; line-height: 34px; font-weight: 590; letter-spacing: -.028em; }
+.photo { display: grid; place-items: center; height: 120px; margin-top: 16px; border-radius: 18px; border: 1px dashed currentColor; opacity: .5; font-size: 12.5px; }
+.card { margin-top: 12px; padding: 14px 16px; display: grid; gap: 10px; background: var(--surface); border-radius: 18px; box-shadow: var(--panel-shadow); }
+.card h3 { font-size: 16px; font-weight: 590; letter-spacing: -.01em; } .meta { color: var(--muted); font-size: 13.5px; }
+.opt { display: flex; justify-content: space-between; align-items: center; gap: 10px; width: 100%; min-height: 48px; padding: 0 14px; border-radius: 14px; background: var(--sunken); font-weight: 510; text-align: left; }
+.opt[aria-pressed=true] { background: var(--accent-wash); box-shadow: inset 0 0 0 1.5px var(--accent); }
+.opt small { color: var(--muted); font-weight: 450; }
+.card .btn { min-height: 48px; font-size: 15px; }
+dl.kv { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; } dl.kv dt { color: var(--muted); } dl.kv dd { font-weight: 510; }
+/* Floating glass tab capsule with a separate action, as in the reference demos; the selected tab sits on a lighter thumb. */
+.tabs { position: absolute; left: 14px; right: 14px; bottom: 16px; display: flex; gap: 8px; align-items: center; }
+.tabs .cap { flex: 1; display: flex; padding: 5px; border-radius: 30px; } .tabs .cap > * { position: relative; z-index: 2; }
+.tabs a { flex: 1; display: grid; place-items: center; min-height: 48px; border-radius: 24px; color: var(--muted); font-size: 12.5px; font-weight: 510; text-decoration: none; }
+.tabs a[aria-current] { color: var(--ink); background: rgb(255 255 255 / .1); box-shadow: inset 0 1px 0 rgb(255 255 255 / .12); }
+[data-theme=light] .tabs a[aria-current] { background: rgb(23 23 28 / .06); }
+.tabs .solo { width: 58px; height: 58px; border-radius: 29px; display: grid; place-items: center; } .tabs .solo .icon-btn { width: 48px; height: 48px; } .tabs .solo > * { position: relative; z-index: 2; }
+.task { display: grid; grid-template-columns: 44px 1fr; gap: 2px 12px; padding: 14px 0; border-top: 1px solid var(--line); }
+.task .rid { font-size: 18px; } .task p { color: var(--muted); font-size: 13.5px; } .task .btn { grid-column: 2; justify-self: start; min-height: 44px; margin-top: 6px; }
+.task.done b { text-decoration: line-through; color: var(--muted); }
+.s-head { padding: 56px 2px 6px; } .s-head h2 { font-size: 30px; line-height: 34px; font-weight: 590; letter-spacing: -.028em; } .s-head p { color: var(--muted); }
+.undo { position: absolute; left: 14px; right: 14px; bottom: 90px; display: flex; justify-content: space-between; align-items: center; padding: 6px 6px 6px 14px; border-radius: 18px; font-weight: 510; }
+.undo > * { position: relative; z-index: 2; } .undo button { min-height: 44px; padding: 0 14px; color: var(--accent); font-weight: 590; }
+.grp { margin: 14px 2px 0; font-size: 12.5px; font-weight: 510; color: var(--muted); }
+/* Kitchen: dark by default, solid, large; glass only on the floating header. No decorative motion. */
+.kitchen { height: auto; border-radius: 24px; font-size: 20px; line-height: 28px; }
+.k-head { position: sticky; top: 12px; margin: 12px; display: flex; justify-content: space-between; align-items: center; gap: 12px; height: 60px; padding: 0 18px; border-radius: 20px; }
+.k-head > * { position: relative; z-index: 2; } .k-head b { font-size: 20px; font-weight: 590; } .k-head span { color: var(--muted); font-size: 16px; }
+.board3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; padding: 4px 16px 16px; }
+.col h3 { font-size: 16px; font-weight: 510; color: var(--muted); margin: 6px 4px 10px; }
+.ticket { display: grid; gap: 8px; margin-bottom: 12px; padding: 14px; border-radius: 18px; background: var(--surface); box-shadow: var(--panel-shadow), inset 3px 0 0 var(--house); }
+.ticket.cooking { box-shadow: var(--panel-shadow), inset 3px 0 0 var(--today); } .ticket.ready { box-shadow: var(--panel-shadow), inset 3px 0 0 var(--avail); }
+.t-top { display: flex; justify-content: space-between; align-items: baseline; } .t-top b { font-size: 28px; line-height: 32px; font-weight: 590; letter-spacing: -.02em; font-variant-numeric: tabular-nums; } .t-top span { font-size: 17px; color: var(--muted); }
+.allergy { display: flex; gap: 8px; align-items: flex-start; padding: 8px 10px; border-radius: 12px; background: color-mix(in srgb, var(--over) 14%, transparent); color: var(--over); font-weight: 590; font-size: 18px; line-height: 24px; }
+.go { min-height: 56px; font-size: 18px; width: 100%; transition: background-color 120ms, color 120ms; }
+@media (max-width: 47.99em) { .grid { grid-template-columns: 1fr; } .board3 { grid-template-columns: 1fr; } .phone { height: 720px; } }
+</style></head>
+<body>
+<main class="page">
+  <header class="intro"><span class="tag">Synthetic design concepts · not built</span><h1>Liquid Glass family</h1>
+    <p>Business is the interactive candidate in the Design Lab ("Liquid Glass × Linear"); a premium <a href="signin.html" style="color:var(--accent)">sign-in preview</a> sits beside it. Guest, Staff and Kitchen are concepts on invented data. Glass is used only for floating navigation and controls; everything people read stays on solid surfaces.</p></header>
+  <div class="grid">
+    <figure><figcaption><b>Guest</b><span class="tag">Concept</span><span>Phone, welcoming, 48 px targets</span></figcaption>
+      <div class="device phone" role="region" aria-label="Guest concierge concept"><div class="scroll">
+        <div class="hero"><small>Room A4 · until Sat 21 Nov</small><h2>Welcome to Hillview</h2><small>Your hosts are on site from 7:00 to 21:00.</small><div class="photo">Property photo slot (supplied by the property)</div></div>
+        <section class="card" aria-labelledby="bf"><h3 id="bf">Breakfast tomorrow</h3><p class="meta">Choose by 20:00 tonight. Served 7:00 to 9:30.</p>
+          <div role="group" aria-label="Breakfast choice" style="display:grid;gap:8px"><button class="opt" type="button" aria-pressed="true">Full farm breakfast <small>Eggs your way</small></button><button class="opt" type="button" aria-pressed="false">Fruit, yoghurt and granola</button><button class="opt" type="button" aria-pressed="false">No breakfast</button></div>
+          <button class="btn btn-primary" type="button" data-say="Saved. You can change it until 20:00.">Save my choice</button><p class="meta" role="status" aria-live="polite"></p></section>
+        <section class="card" aria-labelledby="rq"><h3 id="rq">Ask for something</h3><button class="opt" type="button">Extra towels</button><button class="opt" type="button">Late checkout <small>If available</small></button><p class="meta">A host replies in the app. Urgent help: call reception.</p></section>
+        <section class="card" aria-labelledby="gk"><h3 id="gk">Good to know</h3><dl class="kv"><dt>Wi-Fi</dt><dd>Hillview-Guest</dd><dt>Checkout</dt><dd>10:00</dd><dt>Reception</dt><dd>Dial 0</dd></dl></section>
+        <section class="card" aria-labelledby="nb"><h3 id="nb">Close by, chosen by your hosts</h3><p><b>Saturday market</b> <span class="meta">· 8 min walk · 8:00 to 13:00</span></p><p><b>River trail</b> <span class="meta">· 12 min walk · flat 4 km loop</span></p></section>
+      </div>
+      <nav class="tabs" aria-label="Guest concept navigation"><div class="cap glass lit"><a href="#" aria-current="page">Stay</a><a href="#">Breakfast</a><a href="#">Requests</a><a href="#">Explore</a></div></nav></div></figure>
+
+    <figure><figcaption><b>Staff</b><span class="tag">Concept</span><span>Phone, one hand, one action per task</span></figcaption>
+      <div class="device phone" role="region" aria-label="Staff tasks concept"><div class="scroll">
+        <div class="s-head"><h2>Today</h2><p>Wed 18 Nov · 4 open</p></div>
+        <p class="grp">Now</p>
+        <div class="task"><span class="rid">A7</span><div><b>Check overdue room</b><p>Guest was due out yesterday. Speak to reception first.</p></div><button class="btn btn-primary" type="button" data-done>Mark done</button></div>
+        <div class="task"><span class="rid">A10</span><div><b>Departure clean</b><p>After the guest leaves today. Linen change, full clean.</p></div><button class="btn btn-secondary" type="button" data-done>Mark done</button></div>
+        <p class="grp">Later today</p>
+        <div class="task"><span class="rid">A3</span><div><b>Equipment: replace kettle</b><p>Reported by guest at 08:12. Spare in store room 2.</p></div><button class="btn btn-secondary" type="button" data-done>Mark done</button></div>
+        <div class="task"><span class="rid">A15</span><div><b>Maintenance: shower leak</b><p>Out of service. Plumber booked Thursday.</p></div><button class="btn btn-secondary" type="button">Add note</button></div>
+      </div>
+      <div id="undo" role="status" aria-live="polite"></div>
+      <nav class="tabs" aria-label="Staff concept navigation"><div class="cap glass lit"><a href="#" aria-current="page">Tasks</a><a href="#">Rooms</a><a href="#">Report</a></div><span class="solo glass lit"><button class="icon-btn" type="button" aria-label="Report a problem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg></button></span></nav></div></figure>
+
+    <figure class="wide"><figcaption><b>Kitchen</b><span class="tag">Concept</span><span>Tablet landscape, dark, 56 px targets, allergies first, no decorative motion</span></figcaption>
+      <div class="device kitchen" data-theme="dark" role="region" aria-label="Kitchen board concept" style="color:var(--ink)">
+        <div class="k-head glass"><b>Breakfast · Wed 18 Nov</b><span>7 of 9 rooms ordered · service 7:00 to 9:30</span></div>
+        <div class="board3">
+          <section class="col" aria-labelledby="c1"><h3 id="c1">New (2)</h3>
+            <article class="ticket"><div class="t-top"><b>A4</b><span>for 7:30 · 2 guests</span></div><div class="allergy" role="note"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex:none;margin-top:2px"><path d="m10.3 3.9-8.4 14.6A2 2 0 0 0 3.6 21.5h16.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><span>Allergy: peanuts, tree nuts</span></div><ul><li>2 × Full farm breakfast, eggs poached</li><li>1 × Oat milk</li></ul><button class="btn btn-primary go" type="button" data-next>Start preparing</button></article>
+            <article class="ticket"><div class="t-top"><b>A1</b><span>for 8:00 · 1 guest</span></div><ul><li>1 × Fruit, yoghurt and granola</li></ul><button class="btn btn-primary go" type="button" data-next>Start preparing</button></article></section>
+          <section class="col" aria-labelledby="c2"><h3 id="c2">Preparing (1)</h3>
+            <article class="ticket cooking"><div class="t-top"><b>A3</b><span>for 7:15 · 2 guests</span></div><div class="allergy" role="note"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex:none;margin-top:2px"><path d="m10.3 3.9-8.4 14.6A2 2 0 0 0 3.6 21.5h16.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><span>Gluten free (coeliac): separate toaster</span></div><ul><li>2 × Full farm breakfast, eggs scrambled</li></ul><button class="btn btn-secondary go" type="button" data-next>Mark ready</button></article></section>
+          <section class="col" aria-labelledby="c3"><h3 id="c3">Ready to serve (1)</h3>
+            <article class="ticket ready"><div class="t-top"><b>A10</b><span>since 7:05 · 1 guest</span></div><ul><li>1 × Full farm breakfast, eggs fried</li></ul><button class="btn btn-secondary go" type="button" data-next>Served</button></article></section>
+        </div></div></figure>
+  </div>
+</main>
+<script>
+// Concept-only interactions; nothing leaves the page.
+document.addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  const grp = b.closest('[role=group]'); if (grp) grp.querySelectorAll('.opt').forEach(o => o.setAttribute('aria-pressed', o === b));
+  if (b.dataset.say) b.nextElementSibling.textContent = b.dataset.say;
+  if ('next' in b.dataset) { const steps = ['Start preparing', 'Mark ready', 'Served'], t = b.closest('.ticket'), i = steps.indexOf(b.textContent); if (i < 2) { b.textContent = steps[i + 1]; t.className = 'ticket ' + ['cooking', 'ready'][i]; b.className = 'btn btn-secondary go'; } else t.remove(); }
+  if ('done' in b.dataset) { const t = b.closest('.task'), u = document.getElementById('undo'); t.classList.add('done'); b.disabled = true; b.textContent = 'Done'; u.innerHTML = `<div class="undo glass"><span>${t.querySelector('b').textContent} marked done</span><button type="button">Undo</button></div>`; u.querySelector('button').onclick = () => { t.classList.remove('done'); b.disabled = false; b.textContent = 'Mark done'; u.innerHTML = ''; b.focus(); }; }
+});
+</script>
+</body></html>

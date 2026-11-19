@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stayflow family concepts · Design Lab</title>
+<link rel="stylesheet" href="stayflow.css">
+<style>
+/* Family concepts (007B.6): synthetic, not built. Same tokens as the business candidate; density and target size change per experience. */
+.page { max-width: 1400px; margin: 0 auto; padding: 28px 24px 56px; display: grid; gap: 24px; }
+.intro h1 { font-size: 26px; line-height: 32px; font-weight: 650; letter-spacing: -.025em; }
+.intro p { color: var(--muted); max-width: 70ch; margin-top: 6px; }
+.concept-tag { display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px; border-radius: 99px; background: var(--today-wash); color: var(--today); font-size: 12.5px; font-weight: 560; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 28px; align-items: start; }
+.grid .wide { grid-column: 1 / -1; }
+figure { margin: 0; display: grid; gap: 10px; }
+figcaption { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+figcaption b { font-size: 17px; font-weight: 560; }
+figcaption span:last-child { color: var(--muted); font-size: 13.5px; }
+.device { border: 1px solid var(--line); border-radius: 22px; overflow: hidden; background: var(--canvas); box-shadow: var(--lift); }
+.phone { width: 100%; max-width: 390px; }
+/* Guest */
+.g-band { background: var(--deep); color: var(--on-deep); padding: 18px 20px 22px; }
+.g-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 13px; color: var(--on-deep-muted); }
+.g-top .mark { font-size: 26px; }
+.g-band h2 { margin-top: 18px; font-size: 26px; line-height: 30px; font-weight: 650; letter-spacing: -.025em; }
+.g-band p { color: var(--on-deep-muted); margin-top: 4px; }
+.photo { display: grid; place-items: center; height: 120px; margin: 16px 0 0; border-radius: 14px; border: 1px dashed rgb(246 244 238 / .3); color: var(--on-deep-muted); font-size: 13px; }
+.g-body { padding: 16px; display: grid; gap: 14px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; display: grid; gap: 10px; }
+.card h3 { font-size: 17px; line-height: 24px; font-weight: 560; }
+.card .meta { color: var(--muted); font-size: 14px; line-height: 20px; }
+.opts { display: grid; gap: 8px; }
+.opt { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 48px; padding: 0 14px; border-radius: var(--r-ctl); border: 1px solid var(--line); background: var(--canvas); font-weight: 560; text-align: left; }
+.opt[aria-pressed=true] { border-color: var(--pine); background: var(--pine-wash); box-shadow: inset 0 0 0 1px var(--pine); }
+.opt small { color: var(--muted); font-weight: 420; }
+.btn-lg { min-height: 48px; font-size: 16px; width: 100%; }
+.facts-list { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; font-size: 15px; }
+.facts-list dt { color: var(--muted); } .facts-list dd { font-weight: 560; }
+.tabs { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); background: var(--surface); }
+.tabs a { display: grid; justify-items: center; gap: 2px; min-height: 56px; padding-top: 8px; font-size: 12.5px; font-weight: 560; color: var(--muted); text-decoration: none; }
+.tabs a[aria-current] { color: var(--pine); }
+.rec { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; padding: 10px 0; border-top: 1px solid var(--line); }
+.rec:first-of-type { border-top: 0; }
+.rec span { color: var(--muted); font-size: 13.5px; }
+/* Kitchen */
+.kitchen { font-size: 20px; line-height: 28px; }
+.k-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 20px; background: var(--deep); color: var(--on-deep); }
+.k-head b { font-size: 20px; } .k-head span { color: var(--on-deep-muted); }
+.board3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; padding: 16px; }
+.col h3 { font-size: 18px; font-weight: 560; color: var(--muted); margin: 0 0 10px; }
+.ticket { background: var(--surface); border: 1px solid var(--line); border-left: 6px solid var(--house); border-radius: 12px; padding: 12px 14px; display: grid; gap: 8px; margin-bottom: 12px; }
+.ticket.cooking { border-left-color: var(--today); } .ticket.ready { border-left-color: var(--avail); }
+.t-top { display: flex; justify-content: space-between; align-items: baseline; }
+.t-top b { font-size: 28px; line-height: 32px; font-weight: 650; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.t-top span { font-size: 18px; color: var(--muted); }
+.ticket ul { display: grid; gap: 2px; }
+.allergy { display: flex; gap: 8px; align-items: flex-start; padding: 8px 10px; border-radius: 8px; background: var(--danger-wash); color: var(--danger); font-weight: 650; font-size: 18px; line-height: 24px; }
+.go { min-height: 56px; font-size: 18px; width: 100%; transition: background-color 120ms, border-color 120ms, color 120ms; }
+/* Staff */
+.s-head { padding: 16px; background: var(--deep); color: var(--on-deep); }
+.s-head h2 { font-size: 24px; line-height: 30px; font-weight: 650; letter-spacing: -.02em; }
+.s-head p { color: var(--on-deep-muted); }
+.task { display: grid; grid-template-columns: 52px 1fr; gap: 4px 12px; padding: 14px 16px; border-top: 1px solid var(--line); background: var(--surface); }
+.task .rid { font-size: 20px; line-height: 24px; }
+.task p { color: var(--muted); font-size: 14.5px; line-height: 20px; }
+.task .btn { grid-column: 2; min-height: 48px; justify-self: start; }
+.task.done { background: var(--pine-wash); }
+.s-group { padding: 12px 16px 6px; font-size: 13px; font-weight: 560; color: var(--muted); }
+.undo { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 12px 16px; padding: 8px 8px 8px 14px; border-radius: var(--r-ctl); background: var(--ink); color: #fff; font-weight: 560; }
+.undo button { color: #CFE3D8; min-height: 44px; padding: 0 12px; font-weight: 650; }
+@media (max-width: 47.99em) { .page { padding: 20px 16px 40px; } .grid { grid-template-columns: 1fr; } .board3 { grid-template-columns: 1fr; } }
+</style></head>
+<body>
+<main class="page">
+  <header class="intro"><span class="concept-tag">Synthetic design concepts · not built</span><h1>One family, four experiences</h1>
+    <p>Business is the working candidate in the Design Lab. Guest, Kitchen and Staff are design concepts on invented data to show that the same tokens, type and state language stretch to each job. Nothing here is connected to anything, and no ordering, payment or messaging exists.</p></header>
+  <div class="grid">
+    <figure class="wide"><figcaption><b>Business</b><span class="concept-tag" style="background:var(--pine-wash);color:var(--pine)">Interactive candidate</span><span>Front desk on desktop, tablet and phone. Open it from the Design Lab: “Stayflow candidate”.</span></figcaption>
+      <p class="card"><a href="../frame.html?design=stayflow" style="display:inline-flex;align-items:center;min-height:44px;color:var(--pine);font-weight:560">Open the Business candidate on its own</a></p></figure>
+
+    <figure><figcaption><b>Guest</b><span class="concept-tag">Concept</span><span>Phone, welcoming, 48 px targets</span></figcaption>
+      <div class="device phone" role="region" aria-label="Guest concierge concept">
+        <div class="g-band"><div class="g-top"><span></span><span>Room A4 · until Sat 21 Nov</span></div>
+          <h2>Welcome to Hillview</h2><p>Your hosts are on site from 7:00 to 21:00.</p>
+          <div class="photo">Property photo slot (supplied by the property)</div></div>
+        <div class="g-body">
+          <section class="card" aria-labelledby="bf-h"><h3 id="bf-h">Breakfast tomorrow</h3><p class="meta">Choose by 20:00 tonight. Served 7:00 to 9:30 in the garden room.</p>
+            <div class="opts" role="group" aria-label="Breakfast choice"><button class="opt" type="button" aria-pressed="true">Full farm breakfast <small>Eggs your way</small></button><button class="opt" type="button" aria-pressed="false">Fruit, yoghurt and granola</button><button class="opt" type="button" aria-pressed="false">No breakfast</button></div>
+            <p class="meta">Allergies or dietary needs? Tell us in a request; the kitchen sees it on your order.</p>
+            <button class="btn btn-primary btn-lg" type="button" data-say="Choice saved for tomorrow. You can change it until 20:00.">Save my choice</button><p class="meta" role="status" aria-live="polite"></p></section>
+          <section class="card" aria-labelledby="rq-h"><h3 id="rq-h">Ask for something</h3><div class="opts"><button class="opt" type="button">Extra towels</button><button class="opt" type="button">Late checkout <small>Subject to availability</small></button><button class="opt" type="button">Something else</button></div><p class="meta">A host replies in the app. Requests are not instant; urgent help: call reception.</p></section>
+          <section class="card" aria-labelledby="in-h"><h3 id="in-h">Good to know</h3><dl class="facts-list"><dt>Wi-Fi</dt><dd>Hillview-Guest</dd><dt>Checkout</dt><dd>10:00</dd><dt>Reception</dt><dd>Call 0 from the room phone</dd></dl></section>
+          <section class="card" aria-labelledby="lo-h"><h3 id="lo-h">Close by, chosen by your hosts</h3><div class="rec"><b>Saturday market</b><span>8 min walk</span><span>Local produce, 8:00 to 13:00</span></div><div class="rec"><b>River trail</b><span>12 min walk</span><span>Flat 4 km loop, shaded</span></div></section>
+        </div>
+        <nav class="tabs" aria-label="Guest concept navigation"><a href="#" aria-current="page">Stay</a><a href="#">Breakfast</a><a href="#">Requests</a><a href="#">Explore</a></nav>
+      </div></figure>
+
+    <figure><figcaption><b>Staff</b><span class="concept-tag">Concept</span><span>Phone, one hand, one action per task</span></figcaption>
+      <div class="device phone" role="region" aria-label="Staff tasks concept">
+        <div class="s-head"><h2>Today’s tasks</h2><p>Wed 18 Nov · 4 open</p></div>
+        <p class="s-group">Now</p>
+        <div class="task k-overdue"><span class="rid">A7</span><div><b>Check overdue room</b><p>Guest was due out yesterday. Speak to reception first.</p></div><button class="btn btn-primary" type="button" data-done>Mark done</button></div>
+        <div class="task"><span class="rid">A10</span><div><b>Departure clean</b><p>After the guest leaves today. Linen change, full clean.</p></div><button class="btn btn-secondary" type="button" data-done>Mark done</button></div>
+        <p class="s-group">Later today</p>
+        <div class="task"><span class="rid">A3</span><div><b>Equipment: replace kettle</b><p>Reported by guest at 08:12. Spare in store room 2.</p></div><button class="btn btn-secondary" type="button" data-done>Mark done</button></div>
+        <div class="task"><span class="rid">A15</span><div><b>Maintenance: shower leak</b><p>Out of service. Plumber booked Thursday.</p></div><button class="btn btn-secondary" type="button">Add note</button></div>
+        <div id="undo" role="status" aria-live="polite"></div>
+        <nav class="tabs" aria-label="Staff concept navigation" style="grid-template-columns:repeat(3,1fr)"><a href="#" aria-current="page">Tasks</a><a href="#">Report</a><a href="#">Rooms</a></nav>
+      </div></figure>
+
+    <figure class="wide"><figcaption><b>Kitchen</b><span class="concept-tag">Concept</span><span>Tablet landscape, 56 px targets, allergies first, no decorative motion</span></figcaption>
+      <div class="device kitchen" role="region" aria-label="Kitchen board concept">
+        <div class="k-head"><b>Breakfast · Wed 18 Nov</b><span>7 of 9 rooms ordered · service 7:00 to 9:30</span></div>
+        <div class="board3">
+          <section class="col" aria-labelledby="c1"><h3 id="c1">New (2)</h3>
+            <article class="ticket"><div class="t-top"><b>A4</b><span>for 7:30 · 2 guests</span></div><div class="allergy" role="note"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:2px"><path d="m10.3 3.9-8.4 14.6A2 2 0 0 0 3.6 21.5h16.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><span>Allergy: peanuts, tree nuts</span></div><ul><li>2 × Full farm breakfast, eggs poached</li><li>1 × Oat milk</li></ul><button class="btn btn-primary go" type="button" data-next>Start preparing</button></article>
+            <article class="ticket"><div class="t-top"><b>A1</b><span>for 8:00 · 1 guest</span></div><ul><li>1 × Fruit, yoghurt and granola</li></ul><button class="btn btn-primary go" type="button" data-next>Start preparing</button></article></section>
+          <section class="col" aria-labelledby="c2"><h3 id="c2">Preparing (1)</h3>
+            <article class="ticket cooking"><div class="t-top"><b>A3</b><span>for 7:15 · 2 guests</span></div><div class="allergy" role="note"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:2px"><path d="m10.3 3.9-8.4 14.6A2 2 0 0 0 3.6 21.5h16.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><span>Gluten free (coeliac): separate toaster</span></div><ul><li>2 × Full farm breakfast, eggs scrambled</li></ul><button class="btn btn-secondary go" type="button" data-next>Mark ready</button></article></section>
+          <section class="col" aria-labelledby="c3"><h3 id="c3">Ready to serve (1)</h3>
+            <article class="ticket ready"><div class="t-top"><b>A10</b><span>since 7:05 · 1 guest</span></div><ul><li>1 × Full farm breakfast, eggs fried</li></ul><button class="btn btn-secondary go" type="button" data-next>Served</button></article></section>
+        </div></div></figure>
+  </div>
+</main>
+<script>
+// Concept-only interactions: guest choice, kitchen ticket advance, staff done with undo. No data leaves the page.
+const MARK = '<svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 22V10.5C3 5.8 6.9 2 12 2s9 3.8 9 8.5V22z" fill="var(--on-deep)"/><circle cx="12" cy="9" r="1.8" fill="var(--brass)"/><path d="M7 16.2c1.6-2 3.4-2 5 0s3.4 2 5 0" fill="none" stroke="var(--deep)" stroke-width="1.8" stroke-linecap="round"/></svg>';
+document.querySelectorAll('.g-top span:first-child').forEach(e => { e.innerHTML = MARK; });
+document.addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  const grp = b.closest('[role=group]'); if (grp) grp.querySelectorAll('.opt').forEach(o => o.setAttribute('aria-pressed', o === b));
+  if (b.dataset.say) b.nextElementSibling.textContent = b.dataset.say;
+  if ('next' in b.dataset) { const steps = ['Start preparing', 'Mark ready', 'Served']; const t = b.closest('.ticket'); const i = steps.indexOf(b.textContent); if (i < 2) { b.textContent = steps[i + 1]; t.className = 'ticket ' + ['cooking', 'ready'][i]; b.className = 'btn btn-secondary go'; } else { t.remove(); } }
+  if ('done' in b.dataset) { const t = b.closest('.task'); t.classList.add('done'); b.disabled = true; b.textContent = 'Done'; const u = document.getElementById('undo'); u.innerHTML = `<div class="undo"><span>${t.querySelector('b').textContent} marked done.</span><button type="button" data-undo>Undo</button></div>`; u.querySelector('[data-undo]').onclick = () => { t.classList.remove('done'); b.disabled = false; b.textContent = 'Mark done'; u.innerHTML = ''; b.focus(); }; }
+});
+</script>
+</body></html>

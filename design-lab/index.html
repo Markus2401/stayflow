@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Stayflow Design Lab</title>
+<link rel="stylesheet" href="lab.css"></head>
+<body>
+<header class="top">
+  <div><h1>Stayflow Design Lab</h1><p class="note">Seven directions, the provisional Stayflow candidate and the Liquid Glass experiment, all on identical synthetic data. Not connected to the real application or database.</p></div>
+  <nav class="designs" id="designs" aria-label="Design directions"></nav>
+</header>
+<div class="controls" role="toolbar" aria-label="Preview controls">
+  <div class="grp" role="group" aria-label="Device"><span>Device</span><button data-dev="desktop" aria-pressed="true">Desktop 1280</button><button data-dev="tablet" aria-pressed="false">Tablet 820</button><button data-dev="mobile" aria-pressed="false">Mobile 390</button></div>
+  <label class="grp">Data <select id="size"><option value="standard">Standard (9 rooms)</option><option value="large">Large (60 rooms)</option><option value="stress">Stress (long names)</option></select></label>
+  <label class="grp">Network <select id="net"><option value="0">Instant</option><option value="700">Slow (700 ms)</option><option value="flaky">Flaky (every 3rd save fails)</option></select></label>
+  <button id="reset">Reset demo data</button><button id="full">Full screen</button><a id="newtab" target="_blank" rel="noopener">Open in new tab</a>
+  <button id="cmp" aria-pressed="false">Compare two designs</button><label class="grp" id="otherwrap" hidden>vs <select id="other"></select></label>
+  <span class="live" id="live" aria-live="off"></span>
+</div>
+<main class="stage"><section id="view" class="view" aria-label="Preview"></section>
+<aside class="side" aria-label="Evaluation">
+  <div class="tabs" role="tablist" id="tabs"><button role="tab" data-t="tasks" aria-selected="true">Tasks</button><button role="tab" data-t="rate" aria-selected="false">Rate</button><button role="tab" data-t="parts" aria-selected="false">Components</button><button role="tab" data-t="scores" aria-selected="false">Scoreboard</button><button role="tab" data-t="motion" aria-selected="false">Motion</button></div>
+  <div id="panel" class="panel" role="tabpanel"></div>
+</aside></main>
+<script type="module" src="lab.js"></script></body></html>
